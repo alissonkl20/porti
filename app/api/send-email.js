@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   try {
     await transporter.sendMail({
       from: `"Contato do site" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL,
+      to: email, // agora envia para o e-mail informado pelo usuário
       subject: `Nova mensagem de ${name}`,
       text: `Nome: ${name}\nE-mail: ${email}\nMensagem:\n${message}`,
     });
