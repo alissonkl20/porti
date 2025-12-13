@@ -5,7 +5,7 @@ import "../css/Skill.css";
 const CONTACTS = [
   {
     label: "LinkedIn",
-    href: `https://www.linkedin.com/in/${import.meta.env.VITE_CONTACT_LINKEDIN}`,
+    href: `${import.meta.env.VITE_CONTACT_LINKEDIN_PREFIX || 'https://www.linkedin.com/in/'}${import.meta.env.VITE_CONTACT_LINKEDIN}`,
     color: "#0A66C2",
     icon: (
       <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -19,7 +19,7 @@ const CONTACTS = [
   },
   {
     label: "GitHub",
-    href: `https://github.com/${import.meta.env.VITE_CONTACT_GITHUB}`,
+    href: `${import.meta.env.VITE_CONTACT_GITHUB_PREFIX || 'https://github.com/'}${import.meta.env.VITE_CONTACT_GITHUB}`,
     color: "#333",
     icon: (
       <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ const CONTACTS = [
   },
   {
     label: "WhatsApp",
-    href: `https://wa.me/${import.meta.env.VITE_CONTACT_WHATSAPP}`,
+    href: `${import.meta.env.VITE_CONTACT_WHATSAPP_PREFIX || 'https://wa.me/'}${import.meta.env.VITE_CONTACT_WHATSAPP}`,
     color: "#25D366",
     icon: (
       <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -53,6 +53,23 @@ function Contatos() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(null); // null | 'enviando' | 'sucesso' | 'erro'
 
+
+  // Centralize rotas e endpoints sensíveis
+  const API = {
+    SEND_EMAIL: import.meta.env.VITE_API_SEND_EMAIL || "/api/send-email",
+  };
+
+  // Função para enviar mensagem de contato
+  async function sendContactMessage({ name, email, message }) {
+    const response = await fetch(API.SEND_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+    return response;
+  }
+
+  // Handler do formulário, encapsulando lógica de segurança
   async function handleSubmit(e) {
     e.preventDefault();
     const honeypot = e.target.elements["website"].value;
@@ -62,11 +79,7 @@ function Contatos() {
     }
     setStatus("enviando");
     try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
+      const res = await sendContactMessage({ name, email, message });
       if (res.ok) {
         setStatus("sucesso");
         setName("");
