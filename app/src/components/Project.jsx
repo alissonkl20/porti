@@ -5,43 +5,46 @@ const projects = [
   {
     title: 'Atendezap',
     desc: [
-      'Desenvolvedor Full Stack: entrega do módulo de transcrição de áudio, correção de bugs e otimização de performance.',
+      'Atuei como Desenvolvedor Full Stack: entrega do módulo de transcrição de áudio, correção de bugs e otimização de performance.',
       'Impactos:',
-      '+20% segurança',
-      '+15% performance',
-      '+30% qualidade de testes',
-      '+25% usabilidade',
-      '+10% escalabilidade',
+      '+20% em segurança',
+      '+15% em performance',
+      '+30% em qualidade de testes',
+      '+25% em usabilidade',
+      '+10% em escalabilidade',
     ],
   },
   {
     title: 'Ecostoque',
-    desc: ['Estou desenvolvendo um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Node.js e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
-    'Impacto:',
-    ' +30% na agilidade e eficiência do controle de estoque.',
-    ' +40% na precisão do inventário.',
-    ' +20% na redução de revisas manuais.',  
-    ' +10% na satisfação do cliente.'
+    desc: [
+      'Estou desenvolvendo um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Node.js e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
+      'Impactos:',
+      '+30% na agilidade e eficiência do controle de estoque.',
+      '+40% na precisão do inventário.',
+      '+20% na redução de revisões manuais.',
+      '+10% na satisfação do cliente.'
     ],
   },
   {
     title: 'QA e Tester',
-    desc: ['Atuação como desenvolvedor fullstack freelancer em plataforma SaaS de autoatendimento via WhatsApp. Principais entregas: testes manuais e de estresse, revisão e refatoração de código, aprimoramento de UI/UX e responsividade, testes de segurança (sec tester).',
-   'Impactos:',
-    '+35% na estabilidade do sistema.',
-    '+20% na experiência do usuário.',
-    '+20% na segurança geral da aplicação.',
-    '+15% na performance sob carga.',
-    '+10% na satisfação do cliente.'
+    desc: [
+      'Atuação como desenvolvedor full stack freelancer em plataforma SaaS de autoatendimento via WhatsApp. Principais entregas: testes manuais e de estresse, revisão e refatoração de código, aprimoramento de UI/UX e responsividade, testes de segurança (sec tester).',
+      'Impactos:',
+      '+35% na estabilidade do sistema.',
+      '+20% na experiência do usuário.',
+      '+20% na segurança geral da aplicação.',
+      '+15% na performance sob carga.',
+      '+10% na satisfação do cliente.'
     ],
   },
   {
     title: 'Teste Automatizado',
-    desc: ['Denvolvi um script de teste automatizado com python usando PyAutoGUI simulando um usuario normal ultizando o sistema para identificar bugs e falhas de usabilidade.',
-    'Impacto:',
-    '+25% na detecção precoce de erros',
-    ' +30% na eficiência dos testes.',
-    '45% na cobertura de experiencia do usuario.',
+    desc: [
+      'Desenvolvi um script para executar testes em um e-commerce de teste automatizado com Python usando PyAutoGUI, simulando um usuário normal utilizando o sistema para identificar bugs e falhas de usabilidade.',
+      'Impactos:',
+      '+25% na detecção precoce de erros',
+      '+30% na eficiência dos testes.',
+      '+45% na cobertura de experiência do usuário.'
     ],
   },
   {
