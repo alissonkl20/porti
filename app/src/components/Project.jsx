@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Atendezap',
     desc: [
-      'Atuei como Desenvolvedor Full Stack: entrega end-to-end do módulo de transcrição de áudio, correção de bugs e otimização de performance.',
+      'Atuei como Desenvolvedor Full Stack freelancer, entregando o módulo de transcrição de áudio, realizando correção de bugs e otimizando a performance.',
       'Impactos:',
       '+20% em segurança',
       '+15% em performance',
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'Ecostoque',
     desc: [
-      'Estou desenvolvendo um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Flask e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
+      'Desenvolvimento de um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Flask e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
       'Impactos:',
       '+30% na agilidade e eficiência do controle de estoque.',
       '+40% na precisão do inventário.',
@@ -28,7 +28,7 @@ const projects = [
   {
     title: 'QA e Tester',
     desc: [
-      'Atuação como desenvolvedor full stack freelancer em plataforma SaaS de autoatendimento via WhatsApp. Principais entregas: testes manuais e de estresse, revisão e refatoração de código, aprimoramento de UI/UX e responsividade, testes de segurança (sec tester).',
+      'Atuação como desenvolvedor Full Stack freelancer em plataforma SaaS de autoatendimento via WhatsApp. Principais entregas: testes manuais e de estresse, revisão e refatoração de código, aprimoramento de UI/UX e responsividade, testes de segurança (sec tester).',
       'Impactos:',
       '+35% na estabilidade do sistema.',
       '+20% na experiência do usuário.',
@@ -40,7 +40,7 @@ const projects = [
   {
     title: 'Teste Automatizado',
     desc: [
-      'Desenvolvi um script para executar testes em um e-commerce de teste automatizado com Python usando PyAutoGUI, simulando um usuário normal utilizando o sistema para identificar bugs e falhas de usabilidade.',
+      'Desenvolvi um script para executar testes em um e-commerce automatizado com Python e PyAutoGUI, simulando um usuário real para identificar bugs e falhas de usabilidade.',
       'Impactos:',
       '+25% na detecção precoce de erros',
       '+30% na eficiência dos testes.',
