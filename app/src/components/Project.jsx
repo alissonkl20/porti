@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Atendezap',
     desc: [
-      'Atuei como Desenvolvedor Full Stack: entrega do módulo de transcrição de áudio, correção de bugs e otimização de performance.',
+      'Atuei como Desenvolvedor Full Stack: entrega end-to-end do módulo de transcrição de áudio, correção de bugs e otimização de performance.',
       'Impactos:',
       '+20% em segurança',
       '+15% em performance',
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'Ecostoque',
     desc: [
-      'Estou desenvolvendo um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Node.js e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
+      'Estou desenvolvendo um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Flask e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
       'Impactos:',
       '+30% na agilidade e eficiência do controle de estoque.',
       '+40% na precisão do inventário.',
@@ -59,7 +59,7 @@ const projects = [
     ],
   },
   {
-    title: 'Cardapio Digital',
+    title: 'Cardápio Digital',
     desc: 'Cardápio web responsivo para visualização de produtos de uma confeiteira autônoma. O sistema exibe os itens e preços, mas os pedidos são realizados exclusivamente via WhatsApp, facilitando o contato direto com a confeiteira.',
   },
 ];
