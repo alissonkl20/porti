@@ -1,7 +1,6 @@
 
 
 import '../css/Skill.css';
-import ElectricBorder from './ElectricBorder';
 
 const stacks = [
   {

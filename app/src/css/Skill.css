@@ -1,14 +1,12 @@
-
-
 .skills-container {
   background: var(--color-dark);
   border-radius: 32px;
   max-width: 1400px;
   margin: 3.5rem auto;
-  box-shadow: 0 8px 48px rgba(0,0,0,0.13);
+  box-shadow: 0 8px 48px rgb(0, 0, 0);
   width: 100%;
   padding: 6rem 4vw;
-  background: var(--color-bg);
+  background: var(--color-text);
   color: var(--color-text);
   border-radius: 32px;
   max-width: 1400px;
@@ -22,7 +20,7 @@
 .skills-container h2 {
   text-align: center;
   margin-bottom: 2.5rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 2.5rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -41,10 +39,10 @@
 
 .skill-card {
   border-radius: 14px;
-  box-shadow: 0 2px 16px rgba(30,41,59,0.08), 0 1.5px 8px var(--color-secondary, #e040fb);
+  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.08), 0 1.5px 8px var(--color-secondary, #e040fb);
   padding: 2rem 1.2rem 1.2rem 1.2rem;
   min-width: 220px;
-  background: var(--color-light);
+  background: var(--color-dark);
   color: var(--color-text);
   border-radius: 14px;
   box-shadow: 0 2px 16px rgba(30,41,59,0.08), 0 1.5px 8px var(--color-secondary, #e040fb);
@@ -98,7 +96,7 @@
 
 
 .skill-card p {
-  color: var(--color-dark);
+  color: var(--color-secondary);
   font-size: 1rem;
   margin: 0;
   line-height: 1.6;

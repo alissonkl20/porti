@@ -3,8 +3,7 @@
   align-items: center;
   justify-content: space-between;
   color: var(--color-text);
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-dark);
   padding: 0.7rem 2vw;
   position: sticky;
   top: 0;

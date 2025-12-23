@@ -1,7 +1,7 @@
 .badge {
   display: inline-block;
   color: var(--color-light);
-  background: var(--color-primary);
+  background: var(--color-secondary);
   color: var(--color-bg);
   font-size: 0.98em;
   font-weight: 500;
@@ -20,20 +20,20 @@
 }
 .info-section {
   color: var(--color-text);
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-dark);
+  color: var(--color-secondary);
   border: 1px solid var(--color-primary);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
+  border-radius: 3rem;
+  padding: 2.4rem 1.5rem;
   margin: 2rem auto;
   max-width: 700px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 16px rgb(0, 0, 0);
 }
 
 .info-section-title {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 

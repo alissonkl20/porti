@@ -1,14 +1,13 @@
-
 :root {
   /* Paleta de cores personalizada */
-  --color-primary: #00e676; /* Verde */
-  --color-secondary: #00e676; /* Verde também para manter padrão */
-  --color-dark: #111111;
-  --color-light: #fff;
-  --color-bg: #fff; /* Fundo branco */
-  --color-text: #111111; /* Texto preto */
-  --color-link: #00e676; /* Verde */
-  --color-link-hover: #009f4d; /* Verde escuro */
+  --color-primary: #1e90ff; /* Azul vibrante */
+  --color-secondary: #ff4500; /* Laranja queimado */
+  --color-dark: #000000; /* Preto */
+  --color-light: #2f4f4f; /* Cinza escuro */
+  --color-bg: #121212; /* Fundo preto suave */
+  --color-text: #e0e0e0; /* Texto cinza claro */
+  --color-link: #1e90ff; /* Azul vibrante */
+  --color-link-hover: #4682b4; /* Azul aço */
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
