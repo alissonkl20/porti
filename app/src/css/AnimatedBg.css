@@ -24,7 +24,7 @@
   border-radius: 50%;
   opacity: 0.18;
   animation: moveCircles 9s linear infinite;
-  background: var(--color-primary);
+  background: rgb(255, 0, 0);
 }
 
 .animated-bg-circles span:nth-child(1) {
