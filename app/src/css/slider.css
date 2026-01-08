@@ -1,0 +1,28 @@
+.infinite-slider-wrapper {
+  width: 100vw;              /* Ocupa toda a largura da viewport */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;        /* "Quebra" o container centralizado */
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+}
+
+.infinite-slider {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.slider-item {
+  display: inline-block;
+  padding: 0 32px;
+  font-size: 1.2rem;
+  color: var(--color-pink1);
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+}
