@@ -1,6 +1,6 @@
 import LightRays from './/animation/LightRays';
 import InfiniteSlider from './animation/InfiniteSlider';
-import '../../css/Home.css';
+import '../css/Home.css';
 
 
 
