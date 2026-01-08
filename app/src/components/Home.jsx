@@ -1,5 +1,5 @@
-import LightRays from './LightRays';
-import InfiniteSlider from './InfiniteSlider'; // Importação do slider
+import LightRays from './/animation/LightRays';
+import InfiniteSlider from './animation/InfiniteSlider';
 import '../css/home.css';
 
 

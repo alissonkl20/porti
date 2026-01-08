@@ -3,7 +3,7 @@ import {
   SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiDocker, SiCypress,
   SiJest, SiPython, SiFlask, SiNextdotjs, SiHtml5, SiCss3, SiOpenai
 } from 'react-icons/si';
-import '../css/slider.css';
+import '../../css/slider.css';
 
 const items = [
   { name: 'JavaScript', icon: <SiJavascript /> },
@@ -21,7 +21,7 @@ const items = [
   { name: 'OpenAI', icon: <SiOpenai /> },
 ];
 
-function InfiniteSlider() {
+export default function InfiniteSlider() {
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -56,5 +56,3 @@ function InfiniteSlider() {
     </div>
   );
 }
-
-export default InfiniteSlider;

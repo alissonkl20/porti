@@ -1,6 +1,5 @@
-
-
-import '../css/Skill.css';
+import React from 'react';
+import '../css/Stack.css';
 
 const stacks = [
   {
@@ -11,7 +10,7 @@ const stacks = [
   {
     name: 'Back-end Development',
     description:
-      'Desenvolvimento de APIs RESTful e microsserviços com Node.js, Express e Flask. Integração com bancos de dados PostgreSQL e MySQL, além de experiência em conteinerização de aplicações com Docker.',
+      'Desenvolvimento de APIs RESTful e microsserviços com Node.js, Spring-boot e Flask. Integração com bancos de dados PostgreSQL e MySQL, além de experiência em conteinerização de aplicações com Docker.',
   },
   {
     name: 'DevOps',
@@ -33,14 +32,14 @@ const stacks = [
 function Stacks() {
   return (
     <div style={{ padding: 0, margin: 0 }}>
-      <div className="skills-container">
-        <h2>Minhas Stacks</h2>
-        <div className="skills-list">
+      <div className="stack-container">
+        <h2>Minhas Tecnologias</h2>
+        <div className="stack-list grid">
           {stacks.map((stack, idx) => (
-            <div className="skill-card" key={idx}>
-              <h3>{stack.name}</h3>
-              <p>{stack.description}</p>
-            </div>
+            <React.Fragment key={idx}>
+              <div className="stack-name">{stack.name}</div>
+              <div className="stack-description">{stack.description}</div>
+            </React.Fragment>
           ))}
         </div>
       </div>

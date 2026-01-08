@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './css/App.css';
 import Home from './components/Home';
 import Project from './components/Project';
-import Contatos from './components/Contatos';
 import Stacks from './components/Stacks';
 
 function App() {
@@ -13,14 +12,11 @@ function App() {
       <section style={{ backgroundColor: '#000000ff' }}>
         <Home />
       </section>
-      <section style={{ backgroundColor: '#0606eeff' }}>
+      <section style={{ backgroundColor: '#000000ff' }}>
         <Stacks />
       </section>
-      <section style={{ backgroundColor: '#ffe4e1' }}>
+      <section style={{ backgroundColor: '#000000ff' }}>
         <Project />
-      </section>
-      <section style={{ backgroundColor: '#f5f5dc' }}>
-        <Contatos />
       </section>
     </div>
   );

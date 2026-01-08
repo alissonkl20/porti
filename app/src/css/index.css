@@ -1,7 +1,7 @@
 :root {
   /* Paleta de cores personalizada */
   --color-primary: #1e90ff; /* Azul vibrante */
-  --color-secondary2: #ff0909cc; /* Laranja queimado */
+  --color-secondary2: #ff0000; /* Laranja queimado */
   --color-dark: #000000; /* Preto */
   --color-light: #2f4f4f; /* Cinza escuro */
   --color-bg: #121212; /* Fundo preto suave */
@@ -60,8 +60,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-black);
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
