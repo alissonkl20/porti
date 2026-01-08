@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Stack.css';
+import '../css/Stacks.css';
 
 const stacks = [
   {
