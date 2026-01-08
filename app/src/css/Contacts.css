@@ -1,0 +1,146 @@
+.contacts-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--color-white);
+  max-width: 900px;
+  margin: 2rem auto;
+  background: transparent;
+}
+
+.contacts-title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.contacts-title span {
+  display: inline-block;
+  animation: colorWave 1.5s ease-in-out infinite;
+}
+
+.contacts-title span:nth-child(1) {
+  animation-delay: 0s;
+}
+.contacts-title span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.contacts-title span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.contacts-title span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.contacts-title span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.contacts-title span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.contacts-title span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.contacts-title span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.contacts-title span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.contacts-title span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.contacts-title span:nth-child(11) {
+  animation-delay: 1s;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  margin: 0.8rem 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+.contact-item a {
+  color:var(--color-pink1);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color:var(--color-green2);
+  transform: translateY(-5px);
+  background: var(--color-black);
+  border-color: var(--color-pink1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorWave {
+  0%, 100% {
+    color: var(--color-white)
+  }
+  50% {
+    color:var(--color-pink4);
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .contacts-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-item a {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .contacts-title {
+    font-size: 2rem;
+  }
+
+  .contact-item a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
