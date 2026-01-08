@@ -1,4 +1,4 @@
-/* Estilo base */
+@import url('./index.css');
 .project-cards-container {
   display: flex;
   flex-wrap: wrap; /* Alterado para wrap para melhor responsividade */

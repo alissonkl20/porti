@@ -1,6 +1,5 @@
 body {
-  background-color: black;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white; /* Para garantir que o texto seja visível */
+  margin: 0; /* Remove margens padrão */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+
 }
