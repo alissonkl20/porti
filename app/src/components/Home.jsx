@@ -40,7 +40,7 @@ function HomePage() {
                   <span className="skill-title">Back-end</span>
                   <div className="badges">
                     <span className="badge">
-                      Criação de APIs robustas e escaláveis para milhões e milhares de usuários
+                      Criação de APIs robustas e escaláveis para milhões de usuários 
                     </span>
                   </div>
                 </div>
