@@ -4,13 +4,12 @@ const projects = [
   {
     title: 'Atendezap',
     desc: [
-      'Worked as a freelance Full Stack Developer, delivering the audio transcription module, fixing bugs, and optimizing performance.',
+      'I worked as a freelance Full Stack Developer, delivering the audio transcription module, fixing bugs, and optimizing performance.',
       'Impacts:',
-      '+20% in security',
-      '+15% in performance',
-      '+30% in test quality',
-      '+25% in usability',
-      '+10% in scalability',
+      '10% increase in system response time.',
+      '25% improvement in user experience.',
+      'prevention of future failures.',
+      '100ms increase in interface rendering speed.',
     ],
   },
   {
@@ -18,31 +17,30 @@ const projects = [
     desc: [
       'Development of an inventory management SaaS focused on small and medium-sized businesses, using React, Flask, and PostgreSQL. The system aims to optimize inventory control, reduce losses, and improve operational efficiency.',
       'Impacts:',
-      '+30% in agility and efficiency of inventory control.',
-      '+40% in inventory accuracy.',
-      '+20% in reduction of manual reviews.',
-      '+10% in customer satisfaction.'
+      'increased agility and efficiency in inventory control.',
+      '40% improvement in inventory accuracy.',
+      '20% reduction in manual reviews.',
+      '10% increase in customer satisfaction.'
     ],
   },
   {
     title: 'QA and Tester',
     desc: [
-      'Worked as a freelance Full Stack Developer on a SaaS self-service platform via WhatsApp. Main deliveries: manual and stress testing, code review and refactoring, UI/UX and responsiveness improvements, security testing (sec tester).',
+      'I worked as a freelance Full Stack Developer on a SaaS self-service platform via WhatsApp. Main deliveries: manual and stress testing, code review and refactoring, UI/UX and responsiveness improvements, security testing (sec tester).',
       'Impacts:',
-      '+35% in system stability.',
-      '+20% in user experience.',
-      '+20% in overall application security.',
-      '+15% in performance under load.',
-      '+10% in customer satisfaction.'
+      '20% improvement in user experience.',
+      '10% improvement in overall application security.',
+      '15% improvement in performance under load.',
+      '25% increase in interface information visibility.'
     ],
   },
   {
-    title: 'Automated Testing',
+    title: 'Automated Tests',
     desc: [
-      'Developed a script to run tests on an automated e-commerce platform using Python and PyAutoGUI, simulating a real user to identify bugs and usability issues.',
+      'I developed a script to run tests on an automated e-commerce platform using Python and PyAutoGUI, simulating a real user to identify bugs and usability issues.',
       'Impacts:',
-      '+25% in early error detection',
-      '+30% in testing efficiency.',
+      '+25% in early error detection.',
+      '+20% in testing efficiency.',
       '+45% in user experience coverage.'
     ],
   },
