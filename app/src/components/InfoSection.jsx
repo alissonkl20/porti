@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/InfoSection.css";
 
 const InfoSection = ({ children, title }) => (

@@ -1,26 +1,32 @@
-import { useState } from 'react'
-import './css/App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import './css/App.css';
 import Home from './components/Home';
 import Project from './components/Project';
 import About from './components/About';
 import Contatos from './components/Contatos';
-import Navbar from './components/Navbar';
 import Stacks from './components/Stacks';
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/stack" element={<Stacks />} />
-        <Route path="/contatos" element={<Contatos />} />
-      </Routes>
-    </Router>
+    <div>
+      <section style={{ backgroundColor: '#000000ff' }}>
+        <Home />
+      </section>
+      <section style={{ backgroundColor: '#ff0cdfff' }}>
+        <About />
+      </section>
+      <section style={{ backgroundColor: '#0606eeff' }}>
+        <Stacks />
+      </section>
+      <section style={{ backgroundColor: '#ffe4e1' }}>
+        <Project />
+      </section>
+      <section style={{ backgroundColor: '#f5f5dc' }}>
+        <Contatos />
+      </section>
+    </div>
   );
 }
 

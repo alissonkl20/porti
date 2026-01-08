@@ -9,6 +9,31 @@
   --color-link: #1e90ff; /* Azul vibrante */
   --color-link-hover: #4682b4; /* Azul aço */
 
+  /* Novas cores */
+  --color-black: #000000; /* Preto */
+  --color-white: #ffffff; /* Branco */
+  --color-purple1: #800080; /* Roxo */
+  --color-purple2: #ff03ff; /* Roxo */
+  --color-purple3: #4b024b; /* Roxo */
+  --color-pink1: #f8007c; /* Rosa */
+  --color-pink2: #8d0047; /* Rosa */
+  --color-pink3: #ff69b4; /* Rosa */
+  --color-green1: #008000; /* Verde */
+  --color-green2: #00ff00; /* Verde */
+  --color-green3: #022b02; /* Verde */
+
+  /* Unidades de medida */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem; /* 16px */
+  --font-size-large: 1.5rem; /* 24px */
+
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -25,7 +50,7 @@ a {
   font-weight: 500;
   color: var(--color-link);
   text-decoration: inherit;
-  transition: color 0.2s;
+  transition: color var(--transition-speed);
 }
 a:hover {
   color: var(--color-link-hover);
@@ -41,26 +66,27 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding: var(--spacing-medium);
 }
 
 h1 {
   font-size: 2.5rem;
   line-height: 1.1;
   color: var(--color-primary);
-  margin: 1.5rem 0 1rem 0;
+  margin: var(--spacing-large) 0 var(--spacing-medium) 0;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--color-primary);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-medium);
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-secondary);
   color: var(--color-light);
   cursor: pointer;
-  transition: border-color 0.25s, background 0.2s, color 0.2s;
+  transition: border-color var(--transition-speed), background var(--transition-speed), color var(--transition-speed);
 }
 button:hover {
   border-color: var(--color-link-hover);
@@ -96,7 +122,7 @@ button:focus-visible {
     font-size: 2rem;
   }
   body {
-    padding: 0 1rem;
+    padding: var(--spacing-medium);
   }
 }
 
@@ -105,7 +131,7 @@ button:focus-visible {
     font-size: 1.5rem;
   }
   body {
-    padding: 0 0.5rem;
+    padding: var(--spacing-small);
   }
   button {
     padding: 0.5em 1em;
