@@ -1,7 +1,7 @@
 :root {
   /* Paleta de cores personalizada */
   --color-primary: #1e90ff; /* Azul vibrante */
-  --color-secondary2: #ff0000; /* Laranja queimado */
+  --color-secondary2: #ff0909; /* Laranja queimado */
   --color-dark: #000000; /* Preto */
   --color-light: #2f4f4f; /* Cinza escuro */
   --color-bg: #121212; /* Fundo preto suave */
@@ -54,19 +54,6 @@ a {
 }
 a:hover {
   color: var(--color-link-hover);
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background: var(--color-black);
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: var(--spacing-medium);
 }
 
 h1 {

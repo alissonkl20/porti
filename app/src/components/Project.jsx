@@ -48,17 +48,6 @@ const projects = [
     ],
   },
   {
-    title: 'RPA de Processos',
-    desc: [
-      'Desenvolvimento de RPA local para automação do fechamento de folha de pagamento.',
-      'Funcionalidades:',
-      'Execução automática todo dia 28 para fechamento da folha',
-      'Envio automático no dia 31 de resumo detalhado por e-mail (descontos, horas extras, faltas, etc) para cada funcionário',
-      'Tecnologias: Python, Selenium, PyAutoGUI',
-      'Benefícios: redução de erros manuais, aumento de eficiência e conformidade trabalhista.'
-    ],
-  },
-  {
     title: 'Cardápio Digital',
     desc: 'Cardápio web responsivo para visualização de produtos de uma confeiteira autônoma. O sistema exibe os itens e preços, mas os pedidos são realizados exclusivamente via WhatsApp, facilitando o contato direto com a confeiteira.',
   },

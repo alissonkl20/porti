@@ -1,0 +1,78 @@
+/* Estilo base */
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Alterado para wrap para melhor responsividade */
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project-card {
+  background-color: transparent;
+  border: 1px solid var(--color-green2);
+  width: 300px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-purple2);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.project-card-desc {
+  font-size: 1rem;
+  color: var(--color-green2);
+  line-height: 1.6;
+}
+
+.project-card-desc ul {
+  list-style-type: disc;
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+}
+
+.project-card-desc li {
+  margin-bottom: 0.5rem;
+}
+
+.project-card-desc strong {
+  color: var(--color-pink1);
+}
+
+/* Responsividade para telas menores (tablets e dispositivos móveis) */
+@media (max-width: 768px) {
+  .project-cards-container {
+    flex-direction: column; /* Empilha os cards verticalmente */
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%; /* Ajusta a largura para ocupar mais espaço na tela */
+  }
+
+  .project-card-title {
+    font-size: 1.25rem; /* Reduz o tamanho da fonte */
+  }
+
+  .project-card-desc {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1rem; /* Reduz o padding para telas menores */
+  }
+
+  .project-card-title {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .project-card-desc {
+    font-size: 0.85rem; /* Ajusta o tamanho da fonte */
+  }
+}
