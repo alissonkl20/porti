@@ -22,12 +22,12 @@ function HomePage() {
         />
       </div>
       <div className="info-sections-container">
-        {/* Conteúdo do Home */}
+        {/* Home Content */}
         <section className="info-section">
           <h2 className="info-section-title">FullStack Developer | QA | Tester | LLMs | Pentester</h2>
           <div className="info-section-content">
             <p>
-              Sou Desenvolvedor FullStack com ampla experiência no desenvolvimento de APIs robustas e escaláveis, além da criação de interfaces modernas, intuitivas e responsivas. Atuo fortemente em testes manuais e automatizados, com foco em soluções corretivas e preventivas. Tenho expertise em integração de LLMs (Large Language Models) e mantenho um compromisso contínuo com qualidade, segurança e inovação tecnológica.
+              I am a FullStack Developer with extensive experience in developing robust and scalable APIs, as well as creating modern, intuitive, and responsive interfaces. I am heavily involved in manual and automated testing, focusing on corrective and preventive solutions. I have expertise in integrating LLMs (Large Language Models) and maintain a continuous commitment to quality, security, and technological innovation.
             </p>
           </div>
         </section>
@@ -40,7 +40,7 @@ function HomePage() {
                   <span className="skill-title">Back-end</span>
                   <div className="badges">
                     <span className="badge">
-                      Criação de APIs robustas e escaláveis para milhões de usuários 
+                      Creation of robust and scalable APIs for millions of users 
                     </span>
                   </div>
                 </div>
@@ -48,15 +48,15 @@ function HomePage() {
                   <span className="skill-title">Front-end</span>
                   <div className="badges">
                     <span className="badge">
-                      Criações de interfaces modernas, intuitivas e responsivas
+                      Creation of modern, intuitive, and responsive interfaces
                     </span>
                   </div>
                 </div>
                 <div className="skill-category">
-                  <span className="skill-title">Testes</span>
+                  <span className="skill-title">Testing</span>
                   <div className="badges">
                     <span className="badge">
-                      Testes automatizados e manuais com foco em soluções corretivas e preventivas
+                      Automated and manual testing focusing on corrective and preventive solutions
                     </span>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ function HomePage() {
                   <span className="skill-title">LLMs</span>
                   <div className="badges">
                     <span className="badge">
-                      Integração de LLMs para autoatendimento e realização de tarefas complexas e precisas
+                      Integration of LLMs for self-service and performing complex and precise tasks
                     </span>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ function HomePage() {
             </div>
           </div>
         </section>
-        <InfiniteSlider /> {/* Adicione o slider aqui, logo após a seção Skills */}
+        <InfiniteSlider /> {/* Add the slider here, right after the Skills section */}
       </div>
     </div>
   );

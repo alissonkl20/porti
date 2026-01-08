@@ -1,55 +1,54 @@
-
 import '../css/Project.css';
 
 const projects = [
   {
     title: 'Atendezap',
     desc: [
-      'Atuei como Desenvolvedor Full Stack freelancer, entregando o módulo de transcrição de áudio, realizando correção de bugs e otimizando a performance.',
-      'Impactos:',
-      '+20% em segurança',
-      '+15% em performance',
-      '+30% em qualidade de testes',
-      '+25% em usabilidade',
-      '+10% em escalabilidade',
+      'Worked as a freelance Full Stack Developer, delivering the audio transcription module, fixing bugs, and optimizing performance.',
+      'Impacts:',
+      '+20% in security',
+      '+15% in performance',
+      '+30% in test quality',
+      '+25% in usability',
+      '+10% in scalability',
     ],
   },
   {
     title: 'Ecostoque',
     desc: [
-      'Desenvolvimento de um SaaS de gestão de estoque com foco em pequenas e médias empresas, utilizando React, Flask e PostgreSQL. O sistema visa otimizar o controle de inventário, reduzir perdas e melhorar a eficiência operacional dos negócios.',
-      'Impactos:',
-      '+30% na agilidade e eficiência do controle de estoque.',
-      '+40% na precisão do inventário.',
-      '+20% na redução de revisões manuais.',
-      '+10% na satisfação do cliente.'
+      'Development of an inventory management SaaS focused on small and medium-sized businesses, using React, Flask, and PostgreSQL. The system aims to optimize inventory control, reduce losses, and improve operational efficiency.',
+      'Impacts:',
+      '+30% in agility and efficiency of inventory control.',
+      '+40% in inventory accuracy.',
+      '+20% in reduction of manual reviews.',
+      '+10% in customer satisfaction.'
     ],
   },
   {
-    title: 'QA e Tester',
+    title: 'QA and Tester',
     desc: [
-      'Atuação como desenvolvedor Full Stack freelancer em plataforma SaaS de autoatendimento via WhatsApp. Principais entregas: testes manuais e de estresse, revisão e refatoração de código, aprimoramento de UI/UX e responsividade, testes de segurança (sec tester).',
-      'Impactos:',
-      '+35% na estabilidade do sistema.',
-      '+20% na experiência do usuário.',
-      '+20% na segurança geral da aplicação.',
-      '+15% na performance sob carga.',
-      '+10% na satisfação do cliente.'
+      'Worked as a freelance Full Stack Developer on a SaaS self-service platform via WhatsApp. Main deliveries: manual and stress testing, code review and refactoring, UI/UX and responsiveness improvements, security testing (sec tester).',
+      'Impacts:',
+      '+35% in system stability.',
+      '+20% in user experience.',
+      '+20% in overall application security.',
+      '+15% in performance under load.',
+      '+10% in customer satisfaction.'
     ],
   },
   {
-    title: 'Teste Automatizado',
+    title: 'Automated Testing',
     desc: [
-      'Desenvolvi um script para executar testes em um e-commerce automatizado com Python e PyAutoGUI, simulando um usuário real para identificar bugs e falhas de usabilidade.',
-      'Impactos:',
-      '+25% na detecção precoce de erros',
-      '+30% na eficiência dos testes.',
-      '+45% na cobertura de experiência do usuário.'
+      'Developed a script to run tests on an automated e-commerce platform using Python and PyAutoGUI, simulating a real user to identify bugs and usability issues.',
+      'Impacts:',
+      '+25% in early error detection',
+      '+30% in testing efficiency.',
+      '+45% in user experience coverage.'
     ],
   },
   {
-    title: 'Cardápio Digital',
-    desc: 'Cardápio web responsivo para visualização de produtos de uma confeiteira autônoma. O sistema exibe os itens e preços, mas os pedidos são realizados exclusivamente via WhatsApp, facilitando o contato direto com a confeiteira.',
+    title: 'Digital Menu',
+    desc: 'Responsive web menu for displaying products of a self-employed confectioner. The system displays items and prices, but orders are made exclusively via WhatsApp, facilitating direct contact with the confectioner.',
   },
 ];
 
@@ -57,7 +56,7 @@ function Project() {
   return (
     <>
       <h2 style={{ textAlign: 'center', color: 'var(--color-pink1)', margin: '2rem 0 1.5rem 0', fontWeight: 700, fontSize: '2rem', letterSpacing: '1px' }}>
-        Trabalhos Recentes
+        Recent Works
       </h2>
       <div className="project-cards-container">
         {projects.map((proj, idx) => (

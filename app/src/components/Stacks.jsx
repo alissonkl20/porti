@@ -33,34 +33,34 @@ function Stacks() {
     {
       name: 'Front-end Development',
       description:
-        'Desenvolvimento de interfaces web modernas e responsivas utilizando React, JavaScript, HTML5 e CSS3. Experiência com Next.js, TailwindCSS, Bootstrap, Material UI e Framer Motion para criar experiências interativas, acessíveis e de alta performance.',
+        'Development of modern and responsive web interfaces using React, JavaScript, HTML5, and CSS3. Experience with Next.js, TailwindCSS, Bootstrap, Material UI, and Framer Motion to create interactive, accessible, and high-performance experiences.',
     },
     {
       name: 'Back-end Development',
       description:
-        'Desenvolvimento de APIs RESTful e microsserviços com Node.js, Spring-boot e Flask. Integração com bancos de dados PostgreSQL e MySQL, além de experiência em conteinerização de aplicações com Docker.',
+        'Development of RESTful APIs and microservices with Node.js, Spring Boot, and Flask. Integration with PostgreSQL and MySQL databases, as well as experience in containerizing applications with Docker.',
     },
     {
       name: 'DevOps',
       description:
-        'Automação de deploys, versionamento de ambientes, integração contínua e entrega contínua (CI/CD). Experiência com Docker, gerenciamento de ambientes e boas práticas de infraestrutura.',
+        'Automation of deployments, environment versioning, continuous integration, and continuous delivery (CI/CD). Experience with Docker, environment management, and infrastructure best practices.',
     },
     {
       name: 'Quality Assurance (QA)',
       description:
-        'Execução de testes unitários e de integração utilizando Cypress, além de testes manuais, testes de estresse e revisão de segurança para garantir a qualidade e robustez das aplicações.',
+        'Execution of unit and integration tests using Cypress, as well as manual testing, stress testing, and security reviews to ensure application quality and robustness.',
     },
     {
       name: 'Git',
       description:
-        'Controle de versão eficiente com Git, incluindo criação de branches, merges, resolução de conflitos e colaboração em equipes de desenvolvimento ágil.',
+        'Efficient version control with Git, including branch creation, merges, conflict resolution, and collaboration in agile development teams.',
     },
   ];
 
   return (
     <div style={{ padding: 0, margin: 0 }}>
       <div className="stack-container">
-        <h2>Area de Atua&ccedil;&atilde;o</h2>
+        <h2>Areas of Expertise</h2>
         <div className="stack-list">
           {stacks.map((stack, idx) => (
             <motion.div
