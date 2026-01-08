@@ -56,7 +56,7 @@ const projects = [
 function Project() {
   return (
     <>
-      <h2 style={{ textAlign: 'center', color: 'var(--color-primary)', margin: '2rem 0 1.5rem 0', fontWeight: 700, fontSize: '2rem', letterSpacing: '1px' }}>
+      <h2 style={{ textAlign: 'center', color: 'var(--color-pink1)', margin: '2rem 0 1.5rem 0', fontWeight: 700, fontSize: '2rem', letterSpacing: '1px' }}>
         Trabalhos Recentes
       </h2>
       <div className="project-cards-container">

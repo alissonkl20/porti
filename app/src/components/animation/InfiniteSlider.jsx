@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import {
   SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiDocker, SiCypress,
-  SiJest, SiPython, SiFlask, SiNextdotjs, SiHtml5, SiCss3, SiOpenai
+  SiJest, SiPython, SiFlask, SiNextdotjs, SiHtml5, SiCss3, SiOpenai,
+  SiOpenjdk // Substituído SiJava por SiOpenjdk
 } from 'react-icons/si';
 import '../../css/slider.css';
 
@@ -19,6 +20,7 @@ const items = [
   { name: 'HTML', icon: <SiHtml5 /> },
   { name: 'CSS', icon: <SiCss3 /> },
   { name: 'OpenAI', icon: <SiOpenai /> },
+  { name: 'Java', icon: <SiOpenjdk /> }, // Adicionado Java com SiOpenjdk
 ];
 
 export default function InfiniteSlider() {
