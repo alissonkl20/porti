@@ -1,8 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
 
-const DEFAULT_COLOR = '#ffffffff';
+const DEFAULT_COLOR = 'transparent';
 
+export  {LightRays};
 const hexToRgb = hex => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return m ? [parseInt(m[1], 16) / 255, parseInt(m[2], 16) / 255, parseInt(m[3], 16) / 255] : [1, 1, 1];
@@ -396,4 +397,3 @@ void main() {
   );
 };
 
-export default LightRays;

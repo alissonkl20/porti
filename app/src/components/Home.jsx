@@ -1,9 +1,8 @@
-import LightRays from './/animation/LightRays';
-import InfiniteSlider from './animation/InfiniteSlider';
+import {LightRays} from './/animation/LightRays';
+import {InfiniteSlider} from './animation/InfiniteSlider';
 import '../css/Home.css'; // Corrige o caminho para o arquivo CSS
 
-
-
+export default HomePage ;
 function HomePage() {
   return (
     <div className="home-container">
@@ -24,7 +23,7 @@ function HomePage() {
       <div className="info-sections-container">
         {/* Home Content */}
         <section className="info-section">
-          <h2 className="info-section-title">FullStack Developer | QA | Tester | LLMs | Pentester</h2>
+          <h2 className="info-section-title">FullStack Developer | QA | Tester | LLMs </h2>
           <div className="info-section-content">
             <p>
               I am a FullStack Developer with extensive experience in developing robust and scalable APIs, as well as creating modern, intuitive, and responsive interfaces. I am heavily involved in manual and automated testing, focusing on corrective and preventive solutions. I have expertise in integrating LLMs (Large Language Models) and maintain a continuous commitment to quality, security, and technological innovation.
@@ -78,4 +77,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "./hooks/useOutsideClick";
 import "../css/Project.css";
 
+export {ExpandableProjects};
 const ExpandableProjects = ({ projects }) => {
   const [active, setActive] = useState(null);
   const ref = useRef(null);
@@ -91,4 +92,3 @@ const ExpandableProjects = ({ projects }) => {
   );
 };
 
-export default ExpandableProjects;

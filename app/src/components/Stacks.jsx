@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "./hooks/useOutsideClick";
 import "../css/stack.css";
 
+export  {Stacks};
 function Stacks() {
   const [hovered, setHovered] = useState(null);
   const ref = useRef(null);
@@ -88,4 +89,4 @@ function Stacks() {
   );
 }
 
-export default Stacks;
+

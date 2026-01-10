@@ -1,5 +1,6 @@
 import '../css/Project.css';
 
+export  {Project};
 const projects = [
   {
     title: 'Atendezap',
@@ -80,4 +81,4 @@ function Project() {
   );
 }
 
-export default Project;
+

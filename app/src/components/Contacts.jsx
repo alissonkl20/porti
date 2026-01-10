@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/Contacts.css';
 
 const githubUrl = import.meta.env.VITE_GITHUB_URL;
@@ -7,6 +6,7 @@ const discordUrl = import.meta.env.VITE_DISCORD_URL;
 const emailUrl = import.meta.env.VITE_EMAIL_URL;
 const whatsappUrl = import.meta.env.VITE_WHATSAPP_URL;
 
+export  {Contacts};
 function Contacts() {
   return (
     <div className="contacts-container dock-animation">
@@ -48,4 +48,3 @@ function Contacts() {
   );
 }
 
-export default Contacts;

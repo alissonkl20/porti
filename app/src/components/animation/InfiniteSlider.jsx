@@ -23,7 +23,7 @@ const items = [
   { name: 'Java', icon: <SiOpenjdk /> }, // Adicionado Java com SiOpenjdk
 ];
 
-export default function InfiniteSlider() {
+export function InfiniteSlider() {
   const sliderRef = useRef(null);
 
   useEffect(() => {
