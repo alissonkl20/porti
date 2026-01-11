@@ -11,8 +11,8 @@ function Contacts() {
   return (
     <div className="contacts-container dock-animation">
       <h2 className="contacts-title">
-        {"Contact Me".split("").map((char, index) => (
-          <span key={index}>{char}</span>
+        {"Contact-Me".split("").map((char, index) => (
+          <span key={`char-${index}`}>{char}</span>
         ))}
       </h2>
       <div className="dock-animation">

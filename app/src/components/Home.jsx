@@ -1,9 +1,10 @@
-import {LightRays} from './/animation/LightRays';
+import {LightRays} from './animation/LightRays';
 import {InfiniteSlider} from './animation/InfiniteSlider';
-import '../css/Home.css'; // Corrige o caminho para o arquivo CSS
+import '../css/Home.css';
+import '../css/about.css';
 
-export default HomePage ;
 function HomePage() {
+
   return (
     <div className="home-container">
       <div className="light-rays-container full-screen">
@@ -20,6 +21,22 @@ function HomePage() {
           className="custom-rays"
         />
       </div>
+      <div className="about-container">
+        <div className="about-box">
+          <div className="circle-image" style={{ marginRight: '10rem' }}>
+            <video src="./src/assets/foof.mp4" alt="Profile" loop autoPlay muted playsInline className="circle-video" />
+          </div>
+          <h2 className='cont'>
+            <p>
+              <span>Kaiser</span>
+              <span> Developer</span>
+            </p>
+            <br />
+            <span className='info'>My name is Alisson de Almeida de Oliveira, I am 23 years old, known as Kaiser. <br />
+             I am a responsible, dedicated professional committed to excellence in everything I do.</span>
+          </h2>
+        </div>
+      </div>
       <div className="info-sections-container">
         {/* Home Content */}
         <section className="info-section">
@@ -30,6 +47,7 @@ function HomePage() {
             </p>
           </div>
         </section>
+
         <section className="info-section info-section-skills">
           <h2 className="info-section-title">Skills</h2>
           <div className="info-section-content">
@@ -76,5 +94,7 @@ function HomePage() {
     </div>
   );
 }
+
+export default HomePage;
 
 
