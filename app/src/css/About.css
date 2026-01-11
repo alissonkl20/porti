@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-black);
+  max-width: 100%; /* Garante que o container não ultrapasse a largura da tela */
 }
 
 .about-box {
@@ -11,7 +12,8 @@
   justify-content: center;
   align-items: center;
   background: var(--color-black);
-  flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+  flex-wrap: wrap; /* Mantém o layout flexível para telas menores */
+  gap: 1rem; /* Adiciona espaçamento entre os elementos */
 }
 
 .cont {
@@ -19,6 +21,7 @@
   color: var(--color-pink1);
   cursor: pointer;
   text-align: center;
+  word-wrap: break-word; /* Garante que textos longos sejam quebrados */
 }
 
 .cont span {
@@ -31,7 +34,7 @@
 }
 
 .circle-image {
-  width: clamp(10rem, 20vw, 25rem);
+  width: clamp(20rem, 20vw, 25rem);
   height: clamp(15rem, 30vw, 35rem);
   border-radius: 50%;
   overflow: hidden;
@@ -39,7 +42,7 @@
   justify-content: center;
   align-items: center;
   border: 3px solid var(--color-pink1);
-  margin: 1rem auto; /* Center on smaller screens */
+  margin: 2rem auto; /* Centraliza em telas menores */
 }
 
 .circle-video {
@@ -54,12 +57,12 @@
   font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--color-pink1);
   text-align: center;
-  margin: 1.5rem auto;
+  margin: 2.5rem auto;
   line-height: 1.8;
   max-width: 800px;
 }
 
-/* Media Queries for smaller screens */
+/* Media Queries para telas menores */
 @media (max-width: 1024px) {
   .about-container {
     padding: 1rem;

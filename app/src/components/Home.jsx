@@ -23,15 +23,12 @@ function HomePage() {
       </div>
       <div className="about-container">
         <div className="about-box">
-          <div className="circle-image" style={{ marginRight: '10rem' }}>
+          <div className="circle-image" > 
             <video src="./src/assets/foof.mp4" alt="Profile" loop autoPlay muted playsInline className="circle-video" />
           </div>
           <h2 className='cont'>
-            <p>
               <span>Kaiser</span>
               <span> Developer</span>
-            </p>
-            <br />
             <span className='info'>My name is Alisson de Almeida de Oliveira, I am 23 years old, known as Kaiser. <br />
              I am a responsible, dedicated professional committed to excellence in everything I do.</span>
           </h2>
