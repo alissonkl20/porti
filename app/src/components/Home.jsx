@@ -1,7 +1,7 @@
 import {LightRays} from './animation/LightRays';
 import {InfiniteSlider} from './animation/InfiniteSlider';
 import '../css/Home.css';
-import '../css/about.css';
+import '../css/About.css'; // Corrige o caminho para o arquivo CSS
 
 function HomePage() {
 
