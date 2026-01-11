@@ -25,7 +25,7 @@
 }
 
 .cont span {
-  transition: 0.5s;
+  transition: 0.1ms;
 }
 
 .cont:hover span {

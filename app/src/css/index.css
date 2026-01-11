@@ -43,6 +43,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: swap; /* Melhora o carregamento de fontes */
 }
 
 a {
@@ -53,6 +54,11 @@ a {
 }
 a:hover {
   color: var(--color-link-hover);
+}
+
+/* Adicionando transições globais para links */
+a {
+  transition: color 0.2s ease;
 }
 
 h1 {

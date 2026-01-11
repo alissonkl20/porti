@@ -12,26 +12,26 @@ function HomePage() {
         <LightRays
           raysOrigin="top-center"
           raysColor="#ffffffff"
-          raysSpeed={2.5}
-          lightSpread={3.8}
-          rayLength={2.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
+          raysSpeed={1.5} /* Reduz a velocidade da animação */
+          lightSpread={3.0} /* Ajusta o espalhamento da luz */
+          rayLength={2.0} /* Reduz o comprimento dos raios */
+          followMouse={false} /* Desativa o acompanhamento do mouse para melhorar o desempenho */
+          mouseInfluence={0.05} /* Reduz a influência do mouse */
+          noiseAmount={0.05} /* Diminui o ruído */
+          distortion={0.02} /* Reduz a distorção */
           className="custom-rays"
         />
       </div>
       <div className="about-container">
         <div className="about-box">
           <div className="circle-image" > 
-            <video src={foofVideo} alt="Profile" loop autoPlay muted playsInline className="circle-video" />
+            <video src={foofVideo} alt="Profile" loop autoPlay muted playsInline className="circle-video" loading="lazy" /> {/* Adiciona carregamento assíncrono */}
           </div>
           <h2 className='cont'>
               <span>Kaiser</span>
               <span> Developer</span>
             <span className='info'>My name is Alisson de Almeida de Oliveira, I am 23 years old, known as Kaiser. <br />
-             I am a responsible, dedicated professional committed to excellence in everything I do.</span>
+             I am a responsible, dedicated, and committed professional striving for excellence in everything I do.</span>
           </h2>
         </div>
       </div>
