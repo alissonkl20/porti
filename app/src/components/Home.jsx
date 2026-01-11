@@ -2,6 +2,7 @@ import {LightRays} from './animation/LightRays';
 import {InfiniteSlider} from './animation/InfiniteSlider';
 import '../css/Home.css';
 import '../css/About.css'; // Corrige o caminho para o arquivo CSS
+import foofVideo from '../assets/foof.mp4';
 
 function HomePage() {
 
@@ -24,7 +25,7 @@ function HomePage() {
       <div className="about-container">
         <div className="about-box">
           <div className="circle-image" > 
-            <video src="./src/assets/foof.mp4" alt="Profile" loop autoPlay muted playsInline className="circle-video" />
+            <video src={foofVideo} alt="Profile" loop autoPlay muted playsInline className="circle-video" />
           </div>
           <h2 className='cont'>
               <span>Kaiser</span>
