@@ -1,10 +1,95 @@
-import React from "react";
+// Importar o CSS para estilizar o componente
+import "../css/Works.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function Works() {
+  const cardsData = [
+    { 
+      title: "AtendeZap", 
+      description: "Saas de telecomunicação via whatsapp onde de atendimento silmutaneo a varios clientes",
+      hoverText: "Atuação como desenvolvedor fullstack e QA, corrigindo falhas críticas para garantir a estabilidade e eficiência da plataforma. Responsável pela implementação de uma solução completa de transcrição de áudio para texto utilizando LLMs da OpenAI, além de aprimorar interfaces frontend e otimizar a performance do backend. Essas melhorias impactaram diretamente a experiência do usuário, tornando a plataforma mais robusta, confiável e inovadora.",
+      link: "#"
+    },
+    { 
+      title: "Ecostoque", 
+      description: "Saas de controle de estoque logístico",
+      hoverText: "SaaS de controle de estoque logístico desenvolvido para maximizar a eficiência operacional e aprimorar a gestão de inventário. Oferece controle detalhado de entradas e saídas, alertas inteligentes de estoque baixo e relatórios personalizados, tudo em uma interface intuitiva. A solução contribui para a otimização de processos, aumento da eficácia na gestão de estoques e redução de custos operacionais.",
+      link: "#"
+    },
+    { 
+      title: "S&A Marmitaria", 
+      description: "Delivery de marmitas caseiras",
+      hoverText: "Cardápio digital interativo que agiliza o fluxo de pedidos e proporciona uma experiência personalizada ao cliente. Conta com painel administrativo para gestão eficiente dos pedidos e atualização dinâmica do cardápio. A solução impacta diretamente a eficiência operacional, otimiza o atendimento e reduz falhas manuais no processo de pedidos.",
+      link: "#"
+    },
+    { 
+      title: "PrisaboresCaseiros", 
+      description: "Cardápio digital para Confeitaria",
+      hoverText: "Solução de cardápio digital interativo projetada para agilizar pedidos e elevar a experiência do cliente. Dispõe de um painel administrativo robusto para gerenciamento integral de pedidos e atualização dinâmica do catálogo.",
+      link: "#"
+    },
+    { 
+      title: "Amigo Oculto", 
+      description: "Aplicativo para sorteio de amigo oculto",
+      hoverText: "Sistema de sorteio de amigo oculto online que facilita a organização de eventos. Permite criar grupos, adicionar participantes e realizar sorteios de forma rápida e segura, com notificações automáticas por whatsapp.",
+      link: "#"
+    },
+  ];
+
+  const scrollRow = (direction) => {
+    const row = document.querySelector(".works-row");
+    const cardWidth = row.querySelector(".works-card").offsetWidth + 20; // Largura do card + gap
+    const maxScrollLeft = row.scrollWidth - row.clientWidth;
+
+    if (direction === "left") {
+      row.scrollBy({ left: -cardWidth, behavior: "smooth" });
+    } else if (direction === "right") {
+      // Se já está no último card, volta para o primeiro
+      if (Math.ceil(row.scrollLeft + row.clientWidth) >= row.scrollWidth) {
+        row.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        row.scrollBy({ left: cardWidth, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <div>
-      <h1>Works Page</h1>
-      <p>This is the Works page content.</p>
+    <div className="works-container">
+      <button 
+        className="scroll-button works-btn-left" 
+        onClick={() => scrollRow("left")}
+      >
+        <FaChevronLeft />
+      </button>
+      <div className="works-square">
+        <div className="works-row">
+          {cardsData.map((card, index) => (
+            <div key={index} className="works-card">
+              <div className="card-face front">
+                <h2 className="mas">{card.title}</h2>
+                <p className="muf">{card.description}</p>
+              </div>
+              <div className="card-face back">
+                <p className="hover-description">{card.hoverText}</p>
+                <a 
+                  href={card.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="works-card-btn"
+                >
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <button 
+        className="scroll-button works-btn-right" 
+        onClick={() => scrollRow("right")}
+      >
+        <FaChevronRight />
+      </button>
     </div>
   );
 }
