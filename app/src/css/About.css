@@ -28,11 +28,6 @@
   transition: 0.1ms;
 }
 
-.cont:hover span {
-  color: var(--color-white);
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 120px #ff0000, 0 0 200px #ff0000;
-}
-
 .circle-image {
   width: clamp(20rem, 20vw, 25rem);
   height: clamp(15rem, 30vw, 35rem);

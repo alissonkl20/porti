@@ -4,7 +4,8 @@ import '../css/Home.css';
 import '../css/About.css'; // Corrige o caminho para o arquivo CSS
 import foofVideo from '../assets/foof.mp4';
 
-function HomePage() {
+// Altere o nome da função para About para alinhar com o novo nome desejado
+function About() {
 
   return (
     <div className="home-container">
@@ -41,7 +42,7 @@ function HomePage() {
           <h2 className="info-section-title">FullStack Developer | QA | Tester | LLMs </h2>
           <div className="info-section-content">
             <p>
-              I am a FullStack Developer with extensive experience in developing robust and scalable APIs, as well as creating modern, intuitive, and responsive interfaces. I am heavily involved in manual and automated testing, focusing on corrective and preventive solutions. I have experience67 in integrating LLMs (Large Language Models) and maintain a continuous commitment to quality, security, and technological innovation.
+              I am a FullStack Developer with extensive experience in developing robust and scalable APIs, as well as creating modern, intuitive, and responsive interfaces. I am heavily involved in manual and automated testing, focusing on corrective and preventive solutions. I have experience in integrating LLMs (Large Language Models) and maintain a continuous commitment to quality, security, and technological innovation.
             </p>
           </div>
         </section>
@@ -93,6 +94,6 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default About;
 
 
