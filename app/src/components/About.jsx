@@ -2,7 +2,7 @@ import {LightRays} from './animation/LightRays';
 import {InfiniteSlider} from './animation/InfiniteSlider';
 import '../css/Home.css';
 import '../css/About.css'; // Corrige o caminho para o arquivo CSS
-import foofVideo from '../assets/foof.mp4';
+import foofVideo from '../assets/videos/foof.mp4';
 
 // Altere o nome da função para About para alinhar com o novo nome desejado
 function About() {

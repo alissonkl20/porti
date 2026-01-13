@@ -1,3 +1,54 @@
+.works-hover-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.works-hover-link-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.works-hover-video-area {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  height:100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.works-hover-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.works-title-desc-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.works-hover-link-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
 /* Botões de rolagem animados */
 .scroll-button {
   background: rgba(255, 255, 255, 0.1); 
@@ -43,6 +94,7 @@
   overflow: hidden;
   height: 100vh;
   background-color: transparent;
+  position: relative; /* Necessário para posicionamento absoluto dos botões em mobile */
 }
 
 .works-row {
@@ -52,7 +104,9 @@
   scroll-behavior: smooth; /* Suaviza a rolagem */
   align-items: center; /* Centraliza os itens verticalmente */
   width: 100%;
+  border: 1px solid #ccc;
   scroll-snap-type: x mandatory;
+  height: 600px;
 }
 
 /* Tornar a barra de rolagem horizontal transparente */
@@ -61,17 +115,13 @@
 }
 
 .works-card {
-  border-radius: 30px;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  /* padding substituido por layout flexivel com altura definida */
-  height: 400px;
+   height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  
   text-align: center;
-  flex: 0 0 100%; 
+  flex: 0 0 98%; 
   max-width: 100%;
   transition:
     transform 0.1s ease,
@@ -87,7 +137,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,32 +219,146 @@
 
 /* Torna o layout responsivo */
 @media (max-width: 1024px) {
+  .works-square {
+    width: 90%;
+    height: 700px;
+  }
+
+  .works-row {
+     height: 100%;
+  }
+
   .works-card {
     flex: 0 0 100%;
     max-width: 100%;
+    height: 100%;
+  }
+
+  .works-hover-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .works-hover-video-area {
+    order: 1;
+    width: 100%;
+    height: 45%; 
+    flex: none;
+    min-height: 200px;
+  }
+  
+  .works-hover-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .works-hover-link-area {
+    order: 2;
+    flex: 1;
+    height: 55%;
+    width: 100%;
+    padding: 20px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    align-items: center;
+  }
+
+  .mas {
+    font-size: 3rem;
+  }
+
+  .muf {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .works-card {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .works-square {
+    width: 95%;
+  }
+
+  .hover-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .mas {
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .works-container {
+    height: auto;
+    padding: 10px 0;
+    min-height: 100vh;
+  }
+
+  .works-square {
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .works-row {
+     height: 100%;
+     gap: 0;
+  }
+
   .works-card {
     flex: 0 0 100%;
     max-width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 
-  .works-container {
-    flex-direction: column; /* Alinha os itens verticalmente */
-    height: auto; /* Ajusta a altura para conteúdo variável */
+  .works-hover-video-area {
+    height: 40%;
+  }
+    
+  .works-hover-link-area {
+    height: 60%;
+    padding: 15px;
+  }
+  
+  .mas {
+    font-size: 2rem;
   }
 
-  .works-row {
-    gap: 10px; /* Reduz o espaçamento entre os itens */
+  .muf {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .works-btn-left, .works-btn-right {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+  }
+  
+  .works-btn-left {
+    left: 10px;
+    margin-right: 0;
+  }
+
+  .works-btn-right {
+    right: 10px;
+    margin-left: 0;
+  }
+
+  .works-card-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 10px;
   }
 }
 
