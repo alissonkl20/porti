@@ -1,136 +1,60 @@
-.works-hover-grid {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  width: 100%;
-  height: 100%;
-}
-
-.works-hover-link-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-}
-
-.works-hover-video-area {
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  height:100%;
-  width: 100%;
-  border-radius: inherit;
-}
-
-.works-hover-bg-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.works-title-desc-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-}
-
-.works-hover-link-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-}
-/* Botões de rolagem animados */
-.scroll-button {
-  background: rgba(255, 255, 255, 0.1); 
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 1.2rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-
-.scroll-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.15);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-}
-
-.scroll-button:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.works-btn-left {
-  margin-right: 20px;
-}
-
-.works-btn-right {
-  margin-left: 20px;
-}
+/* Base styles */
 .works-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0; /* Remove margens laterais */
+  padding: 0;
   overflow: hidden;
   height: 100vh;
   background-color: transparent;
-  position: relative; /* Necessário para posicionamento absoluto dos botões em mobile */
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.works-square {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px rgb(238, 236, 236);
 }
 
 .works-row {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* Permite rolagem manual */
-  scroll-behavior: smooth; /* Suaviza a rolagem */
-  align-items: center; /* Centraliza os itens verticalmente */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
   width: 100%;
   border: 1px solid #ccc;
   scroll-snap-type: x mandatory;
   height: 600px;
 }
 
-/* Tornar a barra de rolagem horizontal transparente */
 .works-row::-webkit-scrollbar {
-  display: none; /* Esconde a barra de rolagem padrão */
+  display: none;
 }
 
 .works-card {
-   height: 550px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   text-align: center;
-  flex: 0 0 98%; 
+  flex: 0 0 98%;
   max-width: 100%;
-  transition:
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
   scroll-snap-align: center;
   overflow: hidden;
 }
 
-/* Faces do card para animação */
+/* Card face animation */
 .card-face {
   position: absolute;
   top: 0;
@@ -166,27 +90,15 @@
   transform: translateY(0);
 }
 
-.hover-description {
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-
-
-.works-box {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.works-box h1 {
-  margin-bottom: 10px;
-  font-size: 64px;
-  color: #333;
+/* Content inside cards */
+.works-title-desc-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
 }
 
 .mas {
@@ -195,29 +107,113 @@
   color: #ff0000;
 }
 
-.works-box p {
-  font-size: 16px;
-}
-
 .muf {
   font-size: 26px;
   color: #ffffff;
 }
 
-/* Adicionar um quadrado que ocupa 80% da largura da tela */
-.works-square {
-  width: 80%;
-  height: 80%;
+.works-hover-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.works-hover-link-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.hover-description {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.works-hover-video-area {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.works-hover-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.works-card-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.works-card-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Scroll buttons */
+.scroll-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  background-color: transparent;
-  border-radius: 20px;
-  box-shadow: 0 3px 8px rgb(238, 236, 236);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-/* Torna o layout responsivo */
+.scroll-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.scroll-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.works-btn-left {
+  margin-right: 20px;
+}
+
+.works-btn-right {
+  margin-left: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablets and small notebooks (max-width: 1024px) */
 @media (max-width: 1024px) {
   .works-square {
     width: 90%;
@@ -225,45 +221,35 @@
   }
 
   .works-row {
-     height: 100%;
+    height: 100%;
   }
 
   .works-card {
     flex: 0 0 100%;
-    max-width: 100%;
     height: 100%;
   }
 
   .works-hover-grid {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
   }
 
   .works-hover-video-area {
     order: 1;
-    width: 100%;
-    height: 45%; 
-    flex: none;
+    height: 45%;
     min-height: 200px;
-  }
-  
-  .works-hover-bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .works-hover-link-area {
     order: 2;
-    flex: 1;
     height: 55%;
-    width: 100%;
-    padding: 20px;
     justify-content: flex-start;
-    overflow-y: auto;
-    align-items: center;
+    text-align: center;
+  }
+
+  .hover-description {
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .mas {
@@ -271,10 +257,11 @@
   }
 
   .muf {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
+/* Large mobile phones and small tablets (max-width: 768px) */
 @media (max-width: 768px) {
   .works-square {
     width: 95%;
@@ -282,14 +269,14 @@
 
   .hover-description {
     font-size: 1rem;
-    text-align: center;
   }
-  
+
   .mas {
     font-size: 2.5rem;
   }
 }
 
+/* Standard mobile phones (max-width: 480px) */
 @media (max-width: 480px) {
   .works-container {
     height: auto;
@@ -304,28 +291,24 @@
     border-radius: 0;
     box-shadow: none;
   }
-  
+
   .works-row {
-     height: 100%;
-     gap: 0;
+    gap: 0;
   }
 
   .works-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 100%;
     border-radius: 0;
   }
 
   .works-hover-video-area {
     height: 40%;
   }
-    
+
   .works-hover-link-area {
     height: 60%;
     padding: 15px;
   }
-  
+
   .mas {
     font-size: 2rem;
   }
@@ -334,17 +317,16 @@
     font-size: 1rem;
     padding: 0 15px;
   }
-  
-  .works-btn-left, .works-btn-right {
+
+  .scroll-button {
     width: 40px;
     height: 40px;
     position: absolute;
-    z-index: 20;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
   }
-  
+
   .works-btn-left {
     left: 10px;
     margin-right: 0;
@@ -360,21 +342,4 @@
     font-size: 0.9rem;
     margin-top: 10px;
   }
-}
-
-.works-card-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #fff;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.works-card-btn:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
 }
