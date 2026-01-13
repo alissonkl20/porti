@@ -274,6 +274,10 @@
   .mas {
     font-size: 2.5rem;
   }
+
+  .scroll-button {
+    display: none;
+  }
 }
 
 /* Standard mobile phones (max-width: 480px) */
