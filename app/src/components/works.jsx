@@ -9,7 +9,7 @@ function Works() {
       description: "Saas de telecomunicação via whatsapp onde de atendimento silmutaneo a varios clientes",
       hoverText: "Atuação como desenvolvedor fullstack e QA, corrigindo falhas críticas para garantir a estabilidade e eficiência da plataforma. Responsável pela implementação de uma solução completa de transcrição de áudio para texto utilizando LLMs da OpenAI, além de aprimorar interfaces frontend e otimizar a performance do backend. Essas melhorias impactaram diretamente a experiência do usuário, tornando a plataforma mais robusta, confiável e inovadora.",
       link: "#",
-      hoverVideo: "https://www.w3schools.com/html/mov_bbb.mp4"
+      hoverVideo: "src/assets/videos/food.mp4"
     },
     { 
       title: "Ecostoque", 
@@ -23,7 +23,7 @@ function Works() {
       description: "Delivery de marmitas caseiras",
       hoverText: "Cardápio digital interativo que agiliza o fluxo de pedidos e proporciona uma experiência personalizada ao cliente. Conta com painel administrativo para gestão eficiente dos pedidos e atualização dinâmica do cardápio. A solução impacta diretamente a eficiência operacional, otimiza o atendimento e reduz falhas manuais no processo de pedidos.",
       link: "#",
-      hoverVideo: "https://cdn.videvo.net/videvo_files/video/free/2013-08/large_watermarked/hd0992_preview.mp4"
+      hoverVideo: "src/assets/videos/food.mp4"
     },
     { 
       title: "PrisaboresCaseiros", 
@@ -37,7 +37,7 @@ function Works() {
       description: "Aplicativo para sorteio de amigo oculto",
       hoverText: "Sistema de sorteio de amigo oculto online que facilita a organização de eventos. Permite criar grupos, adicionar participantes e realizar sorteios de forma rápida e segura, com notificações automáticas por whatsapp.",
       link: "#",
-      hoverVideo: "https://cdn.videvo.net/videvo_files/video/free/2013-08/large_watermarked/hd0996_preview.mp4"
+      hoverVideo: "src/assets/videos/food.mp4"
     },
   ];
 
@@ -49,8 +49,8 @@ function Works() {
     if (direction === "left") {
       row.scrollBy({ left: -cardWidth, behavior: "smooth" });
     } else if (direction === "right") {
-      // Se já está no último card, volta para o primeiro
-      if (Math.ceil(row.scrollLeft + row.clientWidth) >= row.scrollWidth) {
+      // Se está no último card ou além, volta para o primeiro card imediatamente
+      if (row.scrollLeft >= maxScrollLeft - 5) {
         row.scrollTo({ left: 0, behavior: "smooth" });
       } else {
         row.scrollBy({ left: cardWidth, behavior: "smooth" });
