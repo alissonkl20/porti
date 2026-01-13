@@ -10,7 +10,7 @@ function Works() {
       hoverText:
         "Worked as a fullstack developer and QA, fixing critical bugs to ensure platform stability and efficiency. Responsible for implementing a complete audio-to-text transcription solution using OpenAI LLMs, as well as improving frontend interfaces and optimizing backend performance. These enhancements directly impacted user experience, making the platform more robust, reliable, and innovative.",
       link: "#",
-      hoverVideo: "/assets/videos/food.mp4",
+      hoverVideo: "/videos/food.mp4",
     },
     {
       title: "Ecostoque",
@@ -18,7 +18,7 @@ function Works() {
       hoverText:
         "Logistics inventory control SaaS developed to maximize operational efficiency and improve inventory management. Offers detailed control of entries and exits, smart low-stock alerts, and custom reports, all in an intuitive interface. The solution helps optimize processes, increase inventory management effectiveness, and reduce operational costs.",
       link: "#",
-      hoverVideo: "/assets/videos/eco.mp4",
+      hoverVideo: "/videos/eco.mp4",
     },
     {
       title: "S&A Marmitaria",
@@ -26,7 +26,7 @@ function Works() {
       hoverText:
         "Interactive digital menu that streamlines order flow and provides a personalized customer experience. Features an admin panel for efficient order management and dynamic menu updates. The solution directly impacts operational efficiency, optimizes service, and reduces manual errors in the ordering process.",
       link: "#",
-      hoverVideo: "/assets/videos/food.mp4",
+      hoverVideo: "/videos/food.mp4",
     },
     {
       title: "PrisaboresCaseiros",
@@ -34,7 +34,7 @@ function Works() {
       hoverText:
         "Interactive digital menu solution designed to speed up orders and enhance customer experience. Includes a robust admin panel for comprehensive order management and dynamic catalog updates.",
       link: "#",
-      hoverVideo: "/assets/videos/food.mp4",
+      hoverVideo: "/videos/food.mp4",
     },
     {
       title: "Secret Santa",
@@ -42,7 +42,7 @@ function Works() {
       hoverText:
         "Online Secret Santa draw system that makes event organization easy. Allows group creation, participant addition, and quick, secure draws with automatic WhatsApp notifications.",
       link: "#",
-      hoverVideo: "/assets/videos/food.mp4",
+      hoverVideo: "/videos/food.mp4",
     },
   ];
 
