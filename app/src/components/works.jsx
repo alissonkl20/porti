@@ -9,7 +9,7 @@ function Works() {
       description: "Telecommunication SaaS via WhatsApp enabling simultaneous customer service for multiple clients.",
       hoverText:
         "Worked as a fullstack developer and QA, fixing critical bugs to ensure platform stability and efficiency. Responsible for implementing a complete audio-to-text transcription solution using OpenAI LLMs, as well as improving frontend interfaces and optimizing backend performance. These enhancements directly impacted user experience, making the platform more robust, reliable, and innovative.",
-      link: "#",
+      link: "https://app.servidoratendezap.click/login",
       hoverVideo: "/videos/food.mp4",
     },
     {
@@ -17,7 +17,7 @@ function Works() {
       description: "Logistics inventory control SaaS.",
       hoverText:
         "Logistics inventory control SaaS developed to maximize operational efficiency and improve inventory management. Offers detailed control of entries and exits, smart low-stock alerts, and custom reports, all in an intuitive interface. The solution helps optimize processes, increase inventory management effectiveness, and reduce operational costs.",
-      link: "#",
+      link: "https://flask-food-app.onrender.com",
       hoverVideo: "/videos/eco.mp4",
     },
     {
@@ -33,7 +33,7 @@ function Works() {
       description: "Digital menu for a bakery.",
       hoverText:
         "Interactive digital menu solution designed to speed up orders and enhance customer experience. Includes a robust admin panel for comprehensive order management and dynamic catalog updates.",
-      link: "#",
+      link: "https://cardapio-web-five.vercel.app/",
       hoverVideo: "/videos/food.mp4",
     },
     {
