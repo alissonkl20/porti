@@ -97,7 +97,7 @@ function Works() {
                   <div className="works-hover-video-area">
                     <video
                       className="works-hover-bg-video"
-                      src={card.hoverVideo}
+                      src={card.hoverVideo || null} // Adiciona fallback para evitar string vazia
                       autoPlay
                       loop
                       muted

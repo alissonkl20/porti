@@ -3,6 +3,7 @@ import {InfiniteSlider} from './animation/InfiniteSlider';
 import '../css/Home.css';
 import '../css/About.css'; // Corrige o caminho para o arquivo CSS
 import foofVideo from '../assets/videos/foof.mp4';
+import cvFile from '../assets/Alisso de Almeida de Oliveira.CV.pdf';
 
 // Altere o nome da função para About para alinhar com o novo nome desejado
 function About() {
@@ -33,7 +34,14 @@ function About() {
               <span> Developer</span>
             <span className='info'>My name is Alisson de Almeida de Oliveira, I am 23 years old, known as Kaiser. <br />
              I am a responsible, dedicated, and committed professional striving for excellence in everything I do.</span>
+             <button className="cv-download-button" onClick={() => {
+  const link = document.createElement('a');
+  link.href = cvFile;
+  link.download = 'Alisso de Almeida de Oliveira.CV.pdf';
+  link.click();
+}}>CV Download</button>
           </h2>
+          
         </div>
       </div>
       <div className="info-sections-container">
