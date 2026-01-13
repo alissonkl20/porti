@@ -1,55 +1,60 @@
-// Importar o CSS para estilizar o componente
+// Import CSS to style the component
 import "../css/works.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function Works() {
   const cardsData = [
-    { 
-      title: "AtendeZap", 
-      description: "Saas de telecomunicação via whatsapp onde de atendimento silmutaneo a varios clientes",
-      hoverText: "Atuação como desenvolvedor fullstack e QA, corrigindo falhas críticas para garantir a estabilidade e eficiência da plataforma. Responsável pela implementação de uma solução completa de transcrição de áudio para texto utilizando LLMs da OpenAI, além de aprimorar interfaces frontend e otimizar a performance do backend. Essas melhorias impactaram diretamente a experiência do usuário, tornando a plataforma mais robusta, confiável e inovadora.",
+    {
+      title: "AtendeZap",
+      description: "Telecommunication SaaS via WhatsApp enabling simultaneous customer service for multiple clients.",
+      hoverText:
+        "Worked as a fullstack developer and QA, fixing critical bugs to ensure platform stability and efficiency. Responsible for implementing a complete audio-to-text transcription solution using OpenAI LLMs, as well as improving frontend interfaces and optimizing backend performance. These enhancements directly impacted user experience, making the platform more robust, reliable, and innovative.",
       link: "#",
-      hoverVideo: "src/assets/videos/food.mp4"
+      hoverVideo: "src/assets/videos/food.mp4",
     },
-    { 
-      title: "Ecostoque", 
-      description: "Saas de controle de estoque logístico",
-      hoverText: "SaaS de controle de estoque logístico desenvolvido para maximizar a eficiência operacional e aprimorar a gestão de inventário. Oferece controle detalhado de entradas e saídas, alertas inteligentes de estoque baixo e relatórios personalizados, tudo em uma interface intuitiva. A solução contribui para a otimização de processos, aumento da eficácia na gestão de estoques e redução de custos operacionais.",
+    {
+      title: "Ecostoque",
+      description: "Logistics inventory control SaaS.",
+      hoverText:
+        "Logistics inventory control SaaS developed to maximize operational efficiency and improve inventory management. Offers detailed control of entries and exits, smart low-stock alerts, and custom reports, all in an intuitive interface. The solution helps optimize processes, increase inventory management effectiveness, and reduce operational costs.",
       link: "#",
-      hoverVideo: "src/assets/videos/eco.mp4"
+      hoverVideo: "src/assets/videos/eco.mp4",
     },
-    { 
-      title: "S&A Marmitaria", 
-      description: "Delivery de marmitas caseiras",
-      hoverText: "Cardápio digital interativo que agiliza o fluxo de pedidos e proporciona uma experiência personalizada ao cliente. Conta com painel administrativo para gestão eficiente dos pedidos e atualização dinâmica do cardápio. A solução impacta diretamente a eficiência operacional, otimiza o atendimento e reduz falhas manuais no processo de pedidos.",
+    {
+      title: "S&A Marmitaria",
+      description: "Homemade meal delivery service.",
+      hoverText:
+        "Interactive digital menu that streamlines order flow and provides a personalized customer experience. Features an admin panel for efficient order management and dynamic menu updates. The solution directly impacts operational efficiency, optimizes service, and reduces manual errors in the ordering process.",
       link: "#",
-      hoverVideo: "src/assets/videos/food.mp4"
+      hoverVideo: "src/assets/videos/food.mp4",
     },
-    { 
-      title: "PrisaboresCaseiros", 
-      description: "Cardápio digital para Confeitaria",
-      hoverText: "Solução de cardápio digital interativo projetada para agilizar pedidos e elevar a experiência do cliente. Dispõe de um painel administrativo robusto para gerenciamento integral de pedidos e atualização dinâmica do catálogo.",
+    {
+      title: "PrisaboresCaseiros",
+      description: "Digital menu for a bakery.",
+      hoverText:
+        "Interactive digital menu solution designed to speed up orders and enhance customer experience. Includes a robust admin panel for comprehensive order management and dynamic catalog updates.",
       link: "#",
-      hoverVideo: "src/assets/videos/food.mp4"
+      hoverVideo: "src/assets/videos/food.mp4",
     },
-    { 
-      title: "Amigo Oculto", 
-      description: "Aplicativo para sorteio de amigo oculto",
-      hoverText: "Sistema de sorteio de amigo oculto online que facilita a organização de eventos. Permite criar grupos, adicionar participantes e realizar sorteios de forma rápida e segura, com notificações automáticas por whatsapp.",
+    {
+      title: "Secret Santa",
+      description: "App for Secret Santa draws.",
+      hoverText:
+        "Online Secret Santa draw system that makes event organization easy. Allows group creation, participant addition, and quick, secure draws with automatic WhatsApp notifications.",
       link: "#",
-      hoverVideo: "src/assets/videos/food.mp4"
+      hoverVideo: "src/assets/videos/food.mp4",
     },
   ];
 
   const scrollRow = (direction) => {
     const row = document.querySelector(".works-row");
-    const cardWidth = row.querySelector(".works-card").offsetWidth + 20; // Largura do card + gap
+    const cardWidth = row.querySelector(".works-card").offsetWidth + 20; // Card width + gap
     const maxScrollLeft = row.scrollWidth - row.clientWidth;
 
     if (direction === "left") {
       row.scrollBy({ left: -cardWidth, behavior: "smooth" });
     } else if (direction === "right") {
-      // Se está no último card ou além, volta para o primeiro card imediatamente
+      // If it's at the last card or beyond, go back to the first card immediately
       if (row.scrollLeft >= maxScrollLeft - 5) {
         row.scrollTo({ left: 0, behavior: "smooth" });
       } else {
@@ -60,8 +65,8 @@ function Works() {
 
   return (
     <div className="works-container">
-      <button 
-        className="scroll-button works-btn-left" 
+      <button
+        className="scroll-button works-btn-left"
         onClick={() => scrollRow("left")}
       >
         <FaChevronLeft />
@@ -80,13 +85,13 @@ function Works() {
                 <div className="works-hover-grid">
                   <div className="works-hover-link-area">
                     <p className="hover-description">{card.hoverText}</p>
-                    <a 
-                      href={card.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="works-card-btn"
                     >
-                      Ver Projeto
+                      View Project
                     </a>
                   </div>
                   <div className="works-hover-video-area">
@@ -97,7 +102,7 @@ function Works() {
                       loop
                       muted
                       playsInline
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "inherit" }}
                     />
                   </div>
                 </div>
@@ -106,8 +111,8 @@ function Works() {
           ))}
         </div>
       </div>
-      <button 
-        className="scroll-button works-btn-right" 
+      <button
+        className="scroll-button works-btn-right"
         onClick={() => scrollRow("right")}
       >
         <FaChevronRight />
