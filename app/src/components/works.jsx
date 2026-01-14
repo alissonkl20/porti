@@ -26,7 +26,7 @@ function Works() {
       hoverText:
         "Interactive digital menu that streamlines order flow and provides a personalized customer experience. Features an admin panel for efficient order management and dynamic menu updates. The solution directly impacts operational efficiency, optimizes service, and reduces manual errors in the ordering process.",
       link: "#",
-      hoverVideo: "/videos/food.mp4",
+      hoverVideo: "",
     },
     {
       title: "PrisaboresCaseiros",
