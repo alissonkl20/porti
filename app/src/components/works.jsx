@@ -10,7 +10,7 @@ function Works() {
       hoverText:
         "Worked as a fullstack developer and QA, fixing critical bugs to ensure platform stability and efficiency. Responsible for implementing a complete audio-to-text transcription solution using OpenAI LLMs, as well as improving frontend interfaces and optimizing backend performance. These enhancements directly impacted user experience, making the platform more robust, reliable, and innovative.",
       link: "https://app.servidoratendezap.click/login",
-      hoverVideo: "",
+      hoverVideo: "/videos/error.mp4",
     },
     {
       title: "Ecostoque",
@@ -26,7 +26,7 @@ function Works() {
       hoverText:
         "Interactive digital menu that streamlines order flow and provides a personalized customer experience. Features an admin panel for efficient order management and dynamic menu updates. The solution directly impacts operational efficiency, optimizes service, and reduces manual errors in the ordering process.",
       link: "#",
-      hoverVideo: "",
+      hoverVideo: "/videos/error.mp4",
     },
     {
       title: "PrisaboresCaseiros",
@@ -42,7 +42,7 @@ function Works() {
       hoverText:
         "Online Secret Santa draw system that makes event organization easy. Allows group creation, participant addition, and quick, secure draws with automatic WhatsApp notifications.",
       link: "#",
-      hoverVideo: "",
+      hoverVideo: "/videos/error.mp4",
     },
   ];
 
