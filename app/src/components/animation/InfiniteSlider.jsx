@@ -1,22 +1,18 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import {
-  SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiDocker, SiCypress,
-  SiJest, SiPython, SiFlask, SiNextdotjs, SiHtml5, SiCss3, SiOpenai,
+  SiTypescript, SiReact, SiNodedotjs, SiDocker,
+  SiPython, SiFlask, SiHtml5, SiCss3, SiOpenai,
   SiOpenjdk // Substituído SiJava por SiOpenjdk
 } from 'react-icons/si';
 import '../../css/slider.css';
 
 const items = [
-  { name: 'JavaScript', icon: <SiJavascript /> },
   { name: 'TypeScript', icon: <SiTypescript /> },
   { name: 'React', icon: <SiReact /> },
   { name: 'Node.js', icon: <SiNodedotjs /> },
   { name: 'Docker', icon: <SiDocker /> },
-  { name: 'Cypress', icon: <SiCypress /> },
-  { name: 'Jest', icon: <SiJest /> },
   { name: 'Python', icon: <SiPython /> },
   { name: 'Flask', icon: <SiFlask /> },
-  { name: 'Next.js', icon: <SiNextdotjs /> },
   { name: 'HTML', icon: <SiHtml5 /> },
   { name: 'CSS', icon: <SiCss3 /> },
   { name: 'OpenAI', icon: <SiOpenai /> },
