@@ -13,6 +13,11 @@
   width: 300px;
   padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 .project-card-title {
   font-size: 1.5rem;
@@ -20,6 +25,10 @@
   color: var(--color-pink1);
   margin-bottom: 1rem;
   text-align: center;
+  transition: color 0.3s ease;
+}
+.project-card:hover .project-card-title {
+  color: var(--color-pink2);
 }
 
 .project-card-desc {
