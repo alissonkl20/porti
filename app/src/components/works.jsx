@@ -5,6 +5,30 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 function Works() {
   const cardsData = [
     {
+      title: "Salgado Dev",
+      description: "Software Engineer Portfolio.",
+      hoverText:
+        "I developed a portfolio for a software engineer showcasing a bit about him and his qualifications, with a minimalist, responsive, and optimized design.",
+      link: "",
+      hoverVideo: "/videos/devs.mp4",
+    },
+    {
+      title: "BarberShop",
+      description: "Portfolio website for a barber shop.",
+      hoverText:
+        "I developed a website for a barber shop, serving as a web page to showcase services and a bit about the shop.",
+      link: "https://barber-shop-portfolio.vercel.app/",
+      hoverVideo: "/videos/barb.mp4",
+    },
+    {
+      title: "MoveRap",
+      description: "An innovative platform that allows artists to create professional profiles, share their music, and showcase projects in an impactful and organized way.",
+      hoverText:
+        "Developed as a complete solution for artists, MoveRap provides tools to highlight talents, connect with audiences, and manage creative projects efficiently. The platform combines intuitive design with advanced features to maximize visibility and professional impact.",
+      link: "https://app.servidoratendezap.click/login",
+      hoverVideo: "/videos/mov.mp4",
+    },
+    {
       title: "AtendeZap",
       description: "Telecommunication SaaS via WhatsApp enabling simultaneous customer service for multiple clients.",
       hoverText:
@@ -97,7 +121,7 @@ function Works() {
                   <div className="works-hover-video-area">
                     <video
                       className="works-hover-bg-video"
-                      src={card.hoverVideo || null} // Adiciona fallback para evitar string vazia
+                      src={card.hoverVideo || null} // Adds fallback to avoid empty string
                       autoPlay
                       loop
                       muted
