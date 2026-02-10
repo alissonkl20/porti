@@ -6,7 +6,7 @@ import foofVideo from '../assets/videos/foof.mp4';
 import cvFile from '../assets/Alisso de Almeida de Oliveira.CV.pdf';
 
 // Altere o nome da função para About para alinhar com o novo nome desejado
-function About() {
+export function About() {
 
   return (
     <div className="home-container">
@@ -102,6 +102,6 @@ function About() {
   );
 }
 
-export default About;
+ 
 
 

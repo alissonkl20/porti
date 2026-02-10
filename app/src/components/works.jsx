@@ -2,7 +2,7 @@
 import "../css/works.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-function Works() {
+export function Works() {
   const cardsData = [
     {
       title: "Salgado Dev",
@@ -145,4 +145,3 @@ function Works() {
   );
 }
 
-export default Works;

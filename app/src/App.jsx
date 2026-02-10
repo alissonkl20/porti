@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './css/index.css';
-import About from './components/About.jsx';
+import {About} from './components/About.jsx';
 import {Project} from './components/Project';
 import {Stacks} from './components/Stacks';
 import {Contacts} from './components/Contacts';
-import Works from './components/works';
+import {Works} from './components/works';
 
 export  {App};
 function App() {
