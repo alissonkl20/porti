@@ -5,7 +5,7 @@ export function Info() {
     <div className="info">
       <h2>Desenvolvimento Global</h2>
       <p className="info-note">
-        Criar 
+        <ul></ul>
       </p>
     </div>
   );

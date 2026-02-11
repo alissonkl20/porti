@@ -9,8 +9,6 @@ import  { Maps }  from './components/Maps.jsx';
 import { Info } from './components/Info.jsx';
 
 export function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <About />
