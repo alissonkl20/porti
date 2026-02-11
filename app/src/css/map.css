@@ -1,0 +1,219 @@
+.maps-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.canvas-container {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: grab;
+  background: black;
+  padding: 20px;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.canvas-container.mobile {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.canvas-container.tablet {
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.canvas-container:active {
+  cursor: grabbing;
+}
+
+.canvas-container.mobile:active {
+  cursor: grabbing;
+}
+
+.canvas-container:hover:not(.mobile):not(.tablet) {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.world-map-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+}
+
+.canvas-container.mobile .world-map-canvas {
+  border-radius: 8px;
+}
+
+.mobile-instructions {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 6px;
+  margin: 0 15px;
+  pointer-events: none;
+}
+
+/* Media Queries aprimoradas */
+@media (max-width: 1024px) {
+  .maps-container {
+    padding: 15px;
+  }
+  
+  .canvas-container.tablet {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-container {
+    padding: 12px 8px;
+  }
+  
+  .canvas-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .mobile-instructions {
+    font-size: 11px;
+    padding: 6px;
+    bottom: 10px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maps-container {
+    padding: 10px 5px;
+  }
+  
+  .canvas-container.mobile {
+    padding: 8px;
+  }
+  
+  .mobile-instructions {
+    font-size: 10px;
+    padding: 5px;
+    bottom: 8px;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .maps-container {
+    padding: 8px 3px;
+  }
+  
+  .canvas-container.mobile {
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .mobile-instructions {
+    font-size: 9px;
+    padding: 4px;
+    bottom: 6px;
+    margin: 0 6px;
+  }
+}
+
+/* Suporte para telas muito altas (smartphones modernos) */
+@media (max-width: 768px) and (min-height: 1000px) {
+  .maps-container {
+    padding: 20px 15px;
+  }
+  
+  .canvas-container.mobile {
+    padding: 15px;
+  }
+}
+
+/* Orientação paisagem em mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .maps-container {
+    padding: 10px;
+  }
+  
+  .canvas-container.mobile {
+    padding: 10px;
+  }
+  
+  .mobile-instructions {
+    bottom: 5px;
+    font-size: 10px;
+    padding: 4px;
+  }
+}
+
+/* Suporte para dispositivos com hover (touch + mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .canvas-container:hover .world-map-canvas {
+    transform: scale(1.01);
+  }
+}
+
+/* Ajustes para navegadores específicos */
+@supports (-webkit-touch-callout: none) {
+  .canvas-container {
+    cursor: pointer;
+  }
+  
+  .world-map-canvas {
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Melhorias de performance para dispositivos móveis */
+@media (prefers-reduced-motion: reduce) {
+  .world-map-canvas {
+    transition: none;
+  }
+}
+
+/* Ajustes adicionais para responsividade */
+
+/* Suporte para telas de alta densidade (DPI) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .world-map-canvas {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+}
+
+/* Melhorias para dispositivos híbridos (touch + mouse) */
+@media (hover: hover) and (pointer: coarse) {
+  .canvas-container {
+    cursor: grab;
+  }
+
+  .canvas-container:active {
+    cursor: grabbing;
+  }
+}
+
+/* Ajustes para telas ultrawide */
+@media (min-aspect-ratio: 21/9) {
+  .maps-container {
+    max-width: 70%;
+  }
+
+  .canvas-container {
+    padding: 25px;
+  }
+}

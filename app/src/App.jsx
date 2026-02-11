@@ -5,9 +5,10 @@ import {Project} from './components/Project';
 import {Stacks} from './components/Stacks';
 import {Contacts} from './components/Contacts';
 import {Works} from './components/works';
+import  {Maps}  from './components/maps.jsx';
+import { Info } from './components/info.jsx';
 
-export  {App};
-function App() {
+export function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -17,6 +18,8 @@ function App() {
       <Stacks />
       <Contacts />
       <Works />
+      <Info />
+      <Maps />
     </div>
   );
 }
