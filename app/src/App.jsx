@@ -5,8 +5,8 @@ import {Project} from './components/Project';
 import {Stacks} from './components/Stacks';
 import {Contacts} from './components/Contacts';
 import {Works} from './components/works';
-import  {Maps}  from './components/Maps.jsx';
-import { Info } from './components/info.jsx';
+import  { Maps }  from './components/maps.jsx';
+import { Info } from './components/Info.jsx';
 
 export function App() {
   const [count, setCount] = useState(0);

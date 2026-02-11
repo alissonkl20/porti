@@ -150,7 +150,6 @@ export const Maps = () => {
       '600': 'Paraguai',
       '604': 'Peru',
       '858': 'Uruguai',
-      '862': 'Venezuela',
       '124': 'Canadá',
       '156': 'China',
       '250': 'França',
