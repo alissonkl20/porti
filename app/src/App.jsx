@@ -6,7 +6,6 @@ import {Stacks} from './components/Stacks';
 import {Contacts} from './components/Contacts';
 import {Works} from './components/works';
 import  { Maps }  from './components/Maps.jsx';
-import { Info } from './components/Info.jsx';
 
 export function App() {
   return (
@@ -16,7 +15,6 @@ export function App() {
       <Stacks />
       <Contacts />
       <Works />
-      <Info />
       <Maps />
     </div>
   );
