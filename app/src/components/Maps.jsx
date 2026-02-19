@@ -2,42 +2,6 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import '../css/map.css';
-import '../css/Info.css';
-
-export const Info = () => {
-  return (
-    <div className="infoS">
-      <h1>Full cicle to API REST</h1>
-      <div className="slar">
-        <div className="circles-container">
-          <div className="circle-wrapper">
-            <div className="circle circle-black">
-              <h1>Frontend</h1>
-            </div>
-          </div>
-          <div className="line"></div>
-          <div className="circle-wrapper">
-            <div className="circle circle-black">
-              <h1>Backend</h1>
-            </div>
-          </div>
-          <div className="line"></div>
-          <div className="circle-wrapper">
-            <div className="circle circle-black">
-              <h1>Server</h1>
-            </div>
-          </div>
-          <div className="line"></div>
-          <div className="circle-wrapper">
-            <div className="circle circle-black">
-              <h1>Frontend</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 
 export const Maps = () => {
