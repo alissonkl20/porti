@@ -9,6 +9,10 @@
   animation:fadeInUp .8s ease both;
 }
 
+.liff{
+ color: var(--color-pink1);
+}
+
 /* Heading: full-width and centered, responsive size */
 .devices > div:first-child{
   flex-basis:100%;
