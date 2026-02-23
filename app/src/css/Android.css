@@ -35,6 +35,13 @@
   }
 }
 
+:root {
+  --blur-amount: 6px;
+  --glass-background: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --max-device-width: 500px;
+}
+
 /* Container Principal */
 .devices-container {
   min-height: 100vh;
@@ -220,7 +227,7 @@
 /* iPhone Moderno */
 .device.iphone {
   position: relative;
-  width: clamp(180px, 20vw, 280px);
+  width: clamp(140px, 30vw, 320px);
   aspect-ratio: 9/19;
   background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
   border-radius: 40px;
@@ -256,6 +263,7 @@
 /* MacBook Moderno */
 .device.macbook {
   width: clamp(300px, 35vw, 500px);
+  max-width: var(--max-device-width);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,9 +325,9 @@
 
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 12px;
+  padding: 16px;
 }
 
 .app-dot {
@@ -406,6 +414,21 @@
     width: 20px;
     height: 20px;
   }
+}
+
+/* Regras específicas quando o componente detecta 'is-mobile' */
+.devices-showcase.is-mobile {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.devices-showcase.is-mobile .device-wrapper[data-device="macbook"] {
+  display: none;
+}
+
+.devices-showcase.is-mobile .device.iphone {
+  width: clamp(140px, 40vw, 360px);
 }
 
 /* Suporte para Orientação */
