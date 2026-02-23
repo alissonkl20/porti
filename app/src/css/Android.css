@@ -1,155 +1,489 @@
-.devices{
-  display:flex;
-  flex-wrap:wrap;
-  gap:2.5rem;
-  justify-content:center;
-  align-items:center;
-  padding:2rem 0;
-  perspective:1200px;
-  animation:fadeInUp .8s ease both;
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
 }
 
-.liff{
- color: var(--color-pink1);
+@keyframes glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
 }
 
-/* Heading: full-width and centered, responsive size */
-.devices > div:first-child{
-  flex-basis:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.devices h1{
-  width:100%;
-  margin:0 0 0.6rem;
-  text-align:center;
-  font-size:clamp(1.25rem, 2.5vw, 2rem);
-  line-height:1.1;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.iphone{
-  position:relative;
-  width:clamp(8rem, 12vw, 12rem);
-  aspect-ratio: 12 / 25;
-  background: linear-gradient(180deg, rgba(221, 218, 218, 0.61), rgba(255,255,255,0.02));
-  border-radius:2.2rem;
-  border:6px solid #000000cc;
-  box-shadow:0 18px 40px rgba(236, 231, 231, 0.192);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:1rem;
-  transform-origin:center;
-  animation:deviceBob 6s ease-in-out infinite;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.iphone-notch{
-  position:absolute;
-  top:8px;
-  left:50%;
-  transform:translateX(-50%);
-  width:5.2rem;
-  height:0.9rem;
-  background:linear-gradient(180deg,#0b0b0b,#1a1a1a);
-  border-radius:10px;
-  box-shadow: inset 0 -1px 6px rgb(233, 232, 232);
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.5);
+  }
 }
 
-.iphone-screen{
-  flex:1;
-  width:100%;
-  background: linear-gradient(180deg,#adadaff8,#3e0786);
-  border-radius:1.2rem;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-.iphone .screen-content{
-  width:90%;
-  height:90%;
-  border-radius:0.9rem;
-  background: linear-gradient(135deg, var(--accent-1), #ff7ab6 40%, var(--accent-2));
-  opacity:0.12;
-  position:relative;
-  overflow:hidden;
+/* Container Principal */
+.devices-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: black;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow: hidden;
 }
 
-.macbook{
-  width:clamp(18rem, 28vw, 30rem);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  transform-origin:center;
-  animation:macTilt 8s ease-in-out infinite;
+.devices-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1" fill="white" opacity="0.1"/></svg>');
+  pointer-events: none;
 }
 
-.macbook-screen{
-  width:100%;
-  height:clamp(10rem, 18vw, 18rem);
-  background: linear-gradient(180deg,#b6b6b8,#3e0786);
-  border-radius:0.6rem;
-  border:6px solid #b3b0b0;
-  box-shadow:0 18px 40px rgba(236, 231, 231, 0.5);
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-.macbook-screen .screen-content{
-  width:96%;
-  height:94%;
-  background: linear-gradient(180deg, rgb(150, 4, 247), rgba(255,0,0,0.08));
-  opacity:0.18;
-  position:relative;
-  border-radius:4px;
-  overflow:hidden;
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
-.macbook-base{
-  width:95%;
-  height:3.6rem;
-  margin-top:0.8rem;
-  background:linear-gradient(#000000,#0f0f0f3d);
-  border-radius:0.6rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:solid 6px rgba(136, 133, 133, 0.69);
-}
-.trackpad{
-  width:34%;
-  height:55%;
-  background:linear-gradient(180deg, rgba(255, 255, 255, 0.836), rgba(223, 221, 221, 0.281));
-  border-radius:6px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
+/* Botões Glassmorphism */
+.buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-/* responsive tweaks for multiple platforms */
-@media (max-width: 1200px){
-  .devices{gap:1.8rem}
-  .macbook{width:26rem}
+.glass-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--glass-background);
+  backdrop-filter: blur(var(--blur-amount));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.911);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  color: white;
+  letter-spacing: 0.5px;
 }
 
-@media (max-width: 900px){
-  .devices{flex-direction:column;gap:1.5rem;padding:1.2rem 0}
-  .macbook{width:22rem}
-  .macbook-screen{height:13rem}
-  .iphone{transform:scale(0.95)}
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(243, 5, 5, 0.925), transparent);
+  transition: left 0.5s ease;
 }
 
-@media (max-width: 600px){
-  .devices{gap:1rem;padding:0.8rem}
-  .macbook{width:18.5rem}
-  .iphone{width:10.2rem;height:20.5rem;padding:.7rem}
-  .macbook-screen{height:11rem}
+.glass-button:hover::before {
+  left: 100%;
 }
 
-/* accessibility: respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .devices, .iphone, .macbook, .macbook-screen, .iphone .screen-content::before, .macbook-screen::before{animation:none;transition:none}
+.glass-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
 }
 
+.glass-button:active {
+  transform: translateY(-2px);
+}
+
+.start-button {
+  background: linear-gradient(135deg, #000000 0%, #bcb7c265 100%);
+  animation: pulseGlow 2s infinite;
+}
+
+.stop-button {
+  background: linear-gradient(135deg, #000000 0%, #bcb7c265 100%);
+}
+
+.glass-button.hidden {
+  display: none;
+}
+
+.glass-button.visible {
+  display: block;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Seção de Dispositivos */
+.devices-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.devices-section.hidden {
+  display: none;
+}
+
+.devices-section.visible {
+  display: block;
+  animation: slideUp 0.8s ease-out;
+}
+
+.devices-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Texto Gradiente */
+.gradient-text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Showcase de Dispositivos */
+.devices-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  perspective: 2000px;
+  padding: 2rem;
+}
+
+.device-wrapper {
+  transition: transform 0.3s ease;
+  animation: float 10s ease-in-out infinite;
+  animation-delay: calc(var(--order, 0) * 0.2s);
+}
+
+.device-wrapper[data-device="iphone"] {
+  --order: 1;
+}
+
+.device-wrapper[data-device="macbook"] {
+  --order: 2;
+}
+
+.device-wrapper:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* iPhone Moderno */
+.device.iphone {
+  position: relative;
+  width: clamp(180px, 20vw, 280px);
+  aspect-ratio: 9/19;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 40px;
+  border: 8px solid #333;
+  box-shadow: 
+    0 30px 50px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-screen {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 45px 10px 10px 10px;
+}
+
+/* MacBook Moderno */
+.device.macbook {
+  width: clamp(300px, 35vw, 500px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.macbook-screen {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 15px 15px 5px 5px;
+  border: 8px solid #444;
+  border-bottom: 4px solid #444;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.macbook-base {
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard {
+  width: 60%;
+  height: 10px;
+  background: #1a1a1a;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.trackpad {
+  width: 80px;
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo das Telas */
+.screen-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.app-dot {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  animation: glow 2s infinite;
+}
+
+.code-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 80%;
+}
+
+.code-lines span {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  animation: glow 3s infinite;
+}
+
+.code-lines span:nth-child(1) { width: 100%; }
+.code-lines span:nth-child(2) { width: 80%; }
+.code-lines span:nth-child(3) { width: 60%; }
+
+/* Responsividade Multiplataforma */
+@media (max-width: 1024px) {
+  .devices-showcase {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .devices-container {
+    padding: 1rem;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .glass-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .devices-showcase {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .device.iphone {
+    width: 200px;
+  }
+
+  .device.macbook {
+    width: 320px;
+  }
+
+  .dynamic-island {
+    width: 100px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .device.iphone {
+    width: 160px;
+  }
+
+  .device.macbook {
+    width: 280px;
+  }
+
+  .gradient-text {
+    font-size: 1.8rem;
+  }
+
+  .app-dot {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Suporte para Orientação */
+@media (orientation: landscape) and (max-height: 600px) {
+  .devices-container {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .devices-showcase {
+    flex-direction: row;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-background: rgba(0, 0, 0, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+  .glass-button {
+    padding: 1.2rem 2.5rem;
+  }
+
+  .glass-button:active {
+    transform: scale(0.98);
+  }
+
+  .device-wrapper {
+    animation: none;
+  }
+
+  .device-wrapper:active {
+    transform: scale(0.98);
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .glass-button {
+    border: 2px solid white;
+  }
+
+  .gradient-text {
+    -webkit-text-fill-color: white;
+    text-shadow: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .devices-container {
+    background: white;
+    min-height: auto;
+  }
+
+  .glass-button {
+    display: none;
+  }
+
+  .device {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
